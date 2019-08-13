@@ -1,0 +1,82 @@
+.g-recaptcha{
+    margin-top: 25px;
+}
+#enviar label{
+    display: block;
+    padding-top: 10px;
+}
+.txt{
+    height: 35px;
+    width: 292px;
+    padding-left: 8px;
+    border: 1px solid #CCC;
+}
+.end{
+    height: 35px;
+    width: 119px;
+    margin: auto;
+    margin-top: 10px;
+    padding-right: 1%;
+    padding-left: 8px;
+    border: 1px solid #CCC;
+}
+.end:focus{
+    height: 35px;
+    width: 125px;
+    margin: auto;
+    margin-top: 10px;
+    padding-right: 1%;
+    padding-left: 8px;
+    font-weight: normal;
+    border: 1px solid rgba(206, 76, 68, 0.97);
+    transition: all 1s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+}
+.txt:focus{
+    color: #000000;
+    font-weight: normal;
+    border: 1px solid rgba(206, 76, 68, 0.97);
+    transition: all 1s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+}
+
+.sb{
+    display: block;
+    border: none;
+    width: 302px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font: 400 18px Oswald;
+    color: #999;
+}
+.sb:hover{
+    background: rgba(206, 76, 68, 0.97);
+    color: #fff
+}
+
+.bradius{
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+.btn {
+    border: none;
+    box-sizing: border-box;
+    padding: 2px 10px;
+    background-color: #4493c7;
+    color: #FFF;
+    height: 35px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.txt,.txt:focus,.sb,sb:hover,#voltar a{
+    transition: all 1s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}

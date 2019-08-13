@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^oabam.org.br/inssdigital [OR]
+RewriteCond %{HTTP_HOST} ^www.oabam.org.br/inssdigital
+RewriteRule ^(.*)$ https://inssdigital.oabam.org.br/ [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.(.*) [NC]
+RewriteRule ^(.*) https://inssdigital.oabam.org.br/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^oabam.org.br
+RewriteRule ^ http://inssdigital.oabam.org.br [L,R=301]
+#t
+RewriteCond %{HTTP_HOST} ^oabam\.org\.br$ [NC]
+RewriteRule ^inssdigital/?$ / [R,NC,L]
+
+RewriteCond %{HTTP_HOST} ^oabam\.org\.br$ [NC]
+RewriteRule ^inssdigital/([^/]+)(/.*)? https://$1.oabam.org.br$2 [R=301,NC,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+ErrorDocument 404 https://inssdigital.oabam.org.br/index.php?404
