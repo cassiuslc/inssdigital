@@ -254,7 +254,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 <?php }else{ ?>
 
              <div class="alert alert-info alert-dismissible fade show mx-auto text-center" role="alert">
-                 <strong>[Atenção] Temos um prazo de até 5 dias uteis para envio.</strong> Entretanto pode ocorrer mais cedo (A senha provisoria tem duração de 24 horas).
+                 <strong>[Atenção] Temos um prazo de até 5 dias uteis para envio.</strong> Fique de olho no seu e-mail pois a senha provisória tem duração de 24 horas.
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                  </button>
