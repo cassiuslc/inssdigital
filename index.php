@@ -10,7 +10,7 @@ $ano = "2019";
 $suporte ="https://inssdigital.oabam.org.br/suporte";
 $como ="#";
 $contato = "https://inssdigital.oabam.org.br/contato";
-$mant = 1;
+//$mant = 1; //Remova o Comentario para Manutencao
 ?>
 <!doctype html>
 <html lang="pt-br">
