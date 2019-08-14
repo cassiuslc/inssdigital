@@ -148,7 +148,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 
 <?php } ?>
 <div class="container">
-        <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/INSS-Digital.png" align="center" width="200" height="150"><br>Enviar pedido de cadastramento INSS Digital</br></b></h1>
+        <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/INSS.jpg" style="padding-left: 15px;" align="center" width="225" height="113"><br>Enviar pedido de cadastramento INSS Digital</br></b></h1>
     <div class="row">
         <div class="col-sm">
         </div>
