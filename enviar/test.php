@@ -26,6 +26,8 @@ $pagehome = "http://www.oabam.org.br";
 $logo = "https://inssdigital.oabam.org.br";
 $emitir = "https://inssdigital.oabam.org.br/emitir/";
 $enviar = "https://inssdigital.oabam.org.br/enviar/";
+echo date('l jS \of F Y h:i:s A');
+exit();
 $ano = data("Y");
 $suporte ="https://inssdigital.oabam.org.br/suporte";
 $como ="https://inssdigital.oabam.org.br/contato";
