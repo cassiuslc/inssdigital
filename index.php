@@ -66,7 +66,8 @@ $mant = 1;
           <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Será gerado um PDF com 2 termos.</b></li>
           <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Após imprimir, assine ambos os termos.</b></li>
         </ul>
-        <a href="<?php echo $emitir;?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-outline-primary">Emitir Documentos</a>
+        <a href="<?php 
+        if(isset($mant)){ echo "#";}else{echo $emitir;}?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-outline-primary"><?php if(isset($mant)){echo "Manutenção"; }else {echo "Emitir Documentos";} ?></a>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
@@ -80,7 +81,7 @@ $mant = 1;
           <li><b style="color: #154259;font-weight: 400; font-size: 20px;">A carterinha da OAB (Frente/Verso).</b></li>
           <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Os termos emitidos e assinados (PDF).</b></li>
         </ul>
-        <a href="<?php echo $enviar;?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-primary">Enviar INSS Digital</a>
+        <a href="<?php if(!(isset($mant))){ echo $enviar;}else{echo "#";}?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-primary"><?php if(!(isset($mant))){echo "Enviar INSS Digital";} else {echo "Manutenção";} ?></a>
       </div>
     </div>
   </div>
