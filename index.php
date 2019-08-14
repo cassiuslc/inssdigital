@@ -10,6 +10,7 @@ $ano = "2019";
 $suporte ="https://inssdigital.oabam.org.br/suporte";
 $como ="#";
 $contato = "https://inssdigital.oabam.org.br/contato";
+$mant = 1;
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -35,6 +36,14 @@ $contato = "https://inssdigital.oabam.org.br/contato";
 <?php if(isset($_GET["404"])){ ?>
 <div class="alert alert-warning alert-dismissible fade show mx-auto text-center" role="alert">
   <strong>Página não encontrada!</strong> Tente novamente ou entre em <a href="<?php echo $suporte; ?>" style="text-decoration: underline;" class="alert-link">contato</a> com suporte. [Cod: 404]
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<?php } ?>
+<?php if(isset($mant)){ ?>
+<div class="alert alert-warning alert-dismissible fade show mx-auto text-center" role="alert">
+  <strong>[Aviso] O INSS digital está passando por uma manutenção.</strong> O serviço está indisponível no momento. [Cod: 299]
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
