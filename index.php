@@ -10,7 +10,7 @@ $ano = "2019";
 $suporte ="https://inssdigital.oabam.org.br/suporte";
 $como ="#";
 $contato = "https://inssdigital.oabam.org.br/contato";
-//$mant = 1; //Remova o Comentario para Manutencao
+$mant = 1; //Remova o Comentario para Manutencao
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -66,7 +66,7 @@ $contato = "https://inssdigital.oabam.org.br/contato";
           <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Será gerado um PDF com 2 termos.</b></li>
           <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Após imprimir, assine ambos os termos.</b></li>
         </ul>
-        <a href="<?php 
+        <a href="<?php
         if(isset($mant)){ echo "#";}else{echo $emitir;}?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-outline-primary"><?php if(isset($mant)){echo "Manutenção"; }else {echo "Emitir Documentos";} ?></a>
       </div>
     </div>
