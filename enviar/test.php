@@ -268,7 +268,7 @@ $voltar = "https://inssdigital.oabam.org.br";
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <form action="/emitir/back/gerar.php" method="post" autocomplete="off">
+                    <form action="../enviar/back/acess.php" method="post" autocomplete="off">
                         <input type="text" style="display:none">
                         <input type="password" style="display:none">
                         <div class="form-group">
