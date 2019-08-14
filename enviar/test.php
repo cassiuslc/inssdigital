@@ -145,7 +145,6 @@ $voltar = "https://inssdigital.oabam.org.br";
                      <span aria-hidden="true">&times;</span>
                  </button>
              </div>
-
 <?php } ?>
 <div class="container">
         <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/INSS.jpg" style="padding-left: 15px;" align="center" width="225" height="113"><br>Enviar pedido de cadastramento INSS Digital</br></b></h1>
@@ -191,23 +190,6 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt01" id="txt01" class="file" placeholder="Anexo I - Requerimento INSS" readonly="readonly">
                                 <input type="button" id="btonea" name="btone" class="btn" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" value="Selecionar" />
-                                <script type="text/javascript">
-                                    $(function(){
-                                        $("#btonea").click(function(){
-                                            $('#sel01').trigger('click');
-                                        });
-                                        $('#sel01').on('change', function() {
-                                            if ($('#sel01').get(0).files.length) {
-                                                var fileSize = $('#sel01').get(0).files[0].size; // in bytes
-                                            }
-                                            if(fileSize >10000000){
-                                                $('#txt01').val("Limite Exedido");
-                                            }else {
-                                                var fileName = $(this)[0].files[0].name;
-                                                $('#txt01').val(fileName);
-                                            }
-                                        });});
-                                </script>
                                 <!--Anexosfim-->
                             </div>
                             <div class="container" style="width: 400px;padding-top: 5px;padding-left: 0px;padding-right: 0px;">
@@ -215,66 +197,15 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 <input type="file" name="sel02" id="sel02" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt02" id="txt02" class="file" placeholder="Anexo II - TCMS" readonly="readonly">
                                 <input type="button" id="btoneb" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" class="btn" value="Selecionar" />
-                                <script type="text/javascript">
-                                    $(function(){
-                                        $("#btoneb").click(function(){
-                                            $('#sel02').trigger('click');
-                                        });
-                                        $('#sel02').on('change', function() {
-                                            if ($('#sel02').get(0).files.length) {
-                                                var fileSize = $('#sel02').get(0).files[0].size; // in bytes
-                                            }
-                                            if(fileSize >10000000){
-                                                $('#txt02').val("Limite Exedido");
-                                            }else {
-                                                var fileName = $(this)[0].files[0].name;
-                                                $('#txt02').val(fileName);
-                                            }
-                                        });});
-                                </script>
                                 <!--Anexosfim-->
                                 <!--Anexos Inicio-->
                                 <input type="file" name="sel03" id="sel03" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt03" id="txt03" class="file" placeholder="Carterinha (Frente)" readonly="readonly">
                                 <input type="button" id="btonec" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" class="btn" value="Selecionar" />
-                                <script type="text/javascript">
-                                    $(function(){
-                                        $("#btonec").click(function(){
-                                            $('#sel03').trigger('click');
-                                        });
-                                        $('#sel03').on('change', function() {
-                                            if ($('#sel03').get(0).files.length) {
-                                                var fileSize = $('#sel03').get(0).files[0].size; // in bytes
-                                            }
-                                            if(fileSize >10000000){
-                                                $('#txt03').val("Limite Exedido");
-                                            }else {
-                                                var fileName = $(this)[0].files[0].name;
-                                                $('#txt03').val(fileName);
-                                            }
-                                        });});
-                                </script>
 
                                 <input type="file" name="sel04" id="sel04" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt04" id="txt04" class="file" placeholder="Carterinha (Verso)" readonly="readonly">
                                 <input type="button" id="btoned" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" class="btn" value="Selecionar" />
-                                <script type="text/javascript">
-                                    $(function(){
-                                        $("#btoned").click(function(){
-                                            $('#sel04').trigger('click');
-                                        });
-                                        $('#sel04').on('change', function() {
-                                            if ($('#sel04').get(0).files.length) {
-                                                var fileSize = $('#sel04').get(0).files[0].size; // in bytes
-                                            }
-                                            if(fileSize >10000000){
-                                                $('#txt04').val("Limite Exedido");
-                                            }else{
-                                                var fileName = $(this)[0].files[0].name;
-                                                $('#txt04').val(fileName);
-                                            }
-                                        });});
-                                </script>
                                 <!--Anexosfim-->
                             </div>
                         </div>
@@ -414,5 +345,73 @@ $voltar = "https://inssdigital.oabam.org.br";
 <!--cepfim-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btonea").click(function(){
+                $('#sel01').trigger('click');
+            });
+            $('#sel01').on('change', function() {
+                if ($('#sel01').get(0).files.length) {
+                    var fileSize = $('#sel01').get(0).files[0].size; // in bytes
+                }
+                if(fileSize >10000000){
+                    $('#txt01').val("Limite Exedido");
+                }else {
+                    var fileName = $(this)[0].files[0].name;
+                    $('#txt01').val(fileName);
+                }
+            });});
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btoneb").click(function(){
+                $('#sel02').trigger('click');
+            });
+            $('#sel02').on('change', function() {
+                if ($('#sel02').get(0).files.length) {
+                    var fileSize = $('#sel02').get(0).files[0].size; // in bytes
+                }
+                if(fileSize >10000000){
+                    $('#txt02').val("Limite Exedido");
+                }else {
+                    var fileName = $(this)[0].files[0].name;
+                    $('#txt02').val(fileName);
+                }
+            });});
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btonec").click(function(){
+                $('#sel03').trigger('click');
+            });
+            $('#sel03').on('change', function() {
+                if ($('#sel03').get(0).files.length) {
+                    var fileSize = $('#sel03').get(0).files[0].size; // in bytes
+                }
+                if(fileSize >10000000){
+                    $('#txt03').val("Limite Exedido");
+                }else {
+                    var fileName = $(this)[0].files[0].name;
+                    $('#txt03').val(fileName);
+                }
+            });});
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btoned").click(function(){
+                $('#sel04').trigger('click');
+            });
+            $('#sel04').on('change', function() {
+                if ($('#sel04').get(0).files.length) {
+                    var fileSize = $('#sel04').get(0).files[0].size; // in bytes
+                }
+                if(fileSize >10000000){
+                    $('#txt04').val("Limite Exedido");
+                }else{
+                    var fileName = $(this)[0].files[0].name;
+                    $('#txt04').val(fileName);
+                }
+            });});
+    </script>
   </body>
 </html>
