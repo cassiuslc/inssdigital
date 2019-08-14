@@ -20,13 +20,13 @@ if(isset($_SESSION['sucesso'])) {
     session_destroy(); //Destruir Session
 }
 
-$title = "INSS Digital - Emitir";
+$title = "INSS Digital - Enviar";
 $pagehome = "http://www.oabam.org.br";
 //Links
 $logo = "https://inssdigital.oabam.org.br";
 $emitir = "https://inssdigital.oabam.org.br/emitir/";
 $enviar = "https://inssdigital.oabam.org.br/enviar/";
-$ano = "2019";
+$ano = data("Y");
 $suporte ="https://inssdigital.oabam.org.br/suporte";
 $como ="https://inssdigital.oabam.org.br/contato";
 $voltar = "https://inssdigital.oabam.org.br";
