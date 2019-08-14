@@ -85,7 +85,7 @@ font-weight: ultra-expanded;
     -ms-user-select: none;
     user-select: none;
 }
-.btn {
+.btnn {
     border: none;
     box-sizing: border-box;
     padding: 2px 10px;
@@ -96,12 +96,12 @@ font-weight: ultra-expanded;
     font-size: 15px;
     vertical-align: middle;
 }
-.btn:hover{
+.btnn:hover{
     cursor: pointer;
     background: rgba(206, 76, 68, 0.97);
     color: #fff
 }
-.btn,.btn:hover{
+.btnn,.btnn:hover{
     transition: all 1s linear;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
