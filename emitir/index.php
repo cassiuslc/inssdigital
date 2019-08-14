@@ -148,7 +148,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 
 <?php } ?>
 <div class="container">
-        <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/termo.png" align="center" width="200" height="150"><br>Emitir Requerimento ao INNS Digital</br></b></h1>
+        <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/termo.png" align="center" width="200" height="150"><br>Emitir Requerimento ao INSS Digital</br></b></h1>
     <div class="row">
         <div class="col-sm">
         </div>
@@ -165,7 +165,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                             <input type="text" class="form-control" id="oab_ni" name="ni" placeholder="Digite o número da sua OAB">
                             <label style="padding-top: 7px;" for="oab_cpf">CPF</label>
                             <input type="text" class="form-control" id="oab_cpf" name="cpf" placeholder="Digite seu CPF">
-                            <label style="padding-top: 7px;" for="oab_email">E-Mail</label>
+                            <label style="padding-top: 7px;" for="oab_email">E-mail</label>
                             <input type="email" class="form-control" id="oab_email" name="email" placeholder="Digite seu email">
                             <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
                         </div>
