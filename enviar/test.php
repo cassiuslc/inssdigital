@@ -42,7 +42,7 @@ $voltar = "https://inssdigital.oabam.org.br";
     <link rel="shortcut icon" href="../img/oabfavoicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    	<link rel="stylesheet" href="../css/style-indext.css">
+    	<link rel="stylesheet" href="../css/style-indexE.css">
 
     <title><?php echo $title;?></title>
   </head>
@@ -187,12 +187,54 @@ $voltar = "https://inssdigital.oabam.org.br";
                         <!-- Campos Endereços-->
                         <div class="row">
                             <div class="col">
-                                <label style="padding-top: 5px;" for="oab_bairro">Bairro</label>
-                                <input type="text" id="oab_bairro" name="bairro" class="form-control" placeholder="">
+                                <label style="padding-top: 5px;" for="btonea">Bairro</label>
+                                <!--Anexos Inicio-->
+                                <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
+                                <input type="text" name="txt01" id="txt01" class="file" placeholder="Requerimento INSS" readonly="readonly">
+                                <input type="button" id="btonea" name="btone" class="btn" value="SELECIONAR" />
+                                <script type="text/javascript">
+                                    $(function(){
+                                        $("#btonea").click(function(){
+                                            $('#sel01').trigger('click');
+                                        });
+                                        $('#sel01').on('change', function() {
+                                            if ($('#sel01').get(0).files.length) {
+                                                var fileSize = $('#sel01').get(0).files[0].size; // in bytes
+                                            }
+                                            if(fileSize >10000000){
+                                                $('#txt01').val("Limite Exedido");
+                                            }else {
+                                                var fileName = $(this)[0].files[0].name;
+                                                $('#txt01').val(fileName);
+                                            }
+                                        });});
+                                </script>
+                                <!--Anexosfim-->
                             </div>
                             <div class="col">
-                                <label style="padding-top: 5px;" for="oab_cidade">Cidade</label>
-                                <input type="text" id="oab_cidade" name="cidade" class="form-control" >
+                                <label style="padding-top: 5px;" for="btoneb">Cidade</label>
+                                <!--Anexos Inicio-->
+                                <input type="file" name="sel02" id="sel02" class="arquivo" accept=".pdf">
+                                <input type="text" name="txt02" id="txt02" class="file" placeholder="Anexo II - TCMS" readonly="readonly">
+                                <input type="button" id="btoneb" name="btone" class="btn" value="SELECIONAR" />
+                                <script type="text/javascript">
+                                    $(function(){
+                                        $("#btoneb").click(function(){
+                                            $('#sel02').trigger('click');
+                                        });
+                                        $('#sel02').on('change', function() {
+                                            if ($('#sel02').get(0).files.length) {
+                                                var fileSize = $('#sel02').get(0).files[0].size; // in bytes
+                                            }
+                                            if(fileSize >10000000){
+                                                $('#txt02').val("Limite Exedido");
+                                            }else {
+                                                var fileName = $(this)[0].files[0].name;
+                                                $('#txt02').val(fileName);
+                                            }
+                                        });});
+                                </script>
+                                <!--Anexosfim-->
                             </div>
                         </div>
                         <div class="container" style="width: 330px;padding-top: 15px;">
