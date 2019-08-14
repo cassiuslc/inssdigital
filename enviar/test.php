@@ -186,7 +186,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                         </div>
                         <!-- Campos Endereços-->
                         <div class="row">
-                            <div class="container" style="width: 400px;padding-top: 15px;">
+                            <div class="container" style="width:400px;padding-top:5px;padding-left: 0px;padding-right: 0px;">
                                 <!--Anexos Inicio-->
                                 <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt01" id="txt01" class="file" placeholder="Requerimento INSS" readonly="readonly">
@@ -210,7 +210,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 </script>
                                 <!--Anexosfim-->
                             </div>
-                            <div class="container" style="width: 400px;padding-top: 15px;">
+                            <div class="container" style="width: 400px;padding-top: 5px;padding-left: 0px;padding-right: 0px;">
                                 <!--Anexos Inicio-->
                                 <input type="file" name="sel02" id="sel02" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt02" id="txt02" class="file" placeholder="Anexo II - TCMS" readonly="readonly">
