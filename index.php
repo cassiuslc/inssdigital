@@ -20,7 +20,7 @@ $contato = "https://inssdigital.oabam.org.br/contato";
     <link rel="shortcut icon" href="img/oabfavoicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style-indext.css">
+  <link rel="stylesheet" href="css/style-indext.css">
     <title><?php echo $title;?></title>
   </head>
   <body>
@@ -54,8 +54,8 @@ $contato = "https://inssdigital.oabam.org.br/contato";
         <h1 class="card-title pricing-card-title"><img src="img/termo.png" width="150" height="113"></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li><b style="color: #154259;font-weight: 500; font-size: 20px;">Emitir Requerimento ao INSS</b></li>
-          <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Sera Gerado um PDF com 2 termos.</b></li>
-          <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Ele deve ser assinado e depois escaneado.</b></li>
+          <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Será gerado um PDF com 2 termos.</b></li>
+          <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Após imprimir, assine ambos os termos.</b></li>
         </ul>
         <a href="<?php echo $emitir;?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-outline-primary">Emitir Documentos</a>
       </div>
@@ -67,11 +67,11 @@ $contato = "https://inssdigital.oabam.org.br/contato";
       <div class="card-body">
         <h1 class="card-title pricing-card-title"><img style="padding-left: 4%;" src="img/INSS.jpg" width="225" height="113"></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><b style="color: #154259;font-weight: 500; font-size: 20px;">Apos a emissão dos termos, será necessário:</b></li>
+          <li><b style="color: #154259;font-weight: 500; font-size: 20px;">Após a emissão dos termos, será necessário:</b></li>
           <li><b style="color: #154259;font-weight: 400; font-size: 20px;">A carterinha da OAB (Frente/Verso).</b></li>
-          <li><b style="color: #154259;font-weight: 400; font-size: 20px;"> Os documentos emitidos assinados.</b></li>
+          <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Os termos emitidos e assinados (PDF).</b></li>
         </ul>
-        <a href="<?php echo $enviar;?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-primary">Enviar INNS Digital</a>
+        <a href="<?php echo $enviar;?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-primary">Enviar INSS Digital</a>
       </div>
     </div>
   </div>
