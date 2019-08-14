@@ -101,3 +101,8 @@ font-weight: ultra-expanded;
     background: rgba(206, 76, 68, 0.97);
     color: #fff
 }
+.btn,.btn:hover{
+    transition: all 1s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+}
