@@ -185,20 +185,16 @@ $voltar = "https://inssdigital.oabam.org.br";
                         </div>
                         <!-- Campos Endereços-->
                         <div class="row">
-                            <div class="container" style="width:400px;padding-top:5px;padding-left: 0px;padding-right: 0px;">
-                                <!--Anexos Inicio-->
-                                <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
-                                <input type="text" name="txt01" id="txt01" class="file" placeholder="Anexo I - Requerimento INSS" readonly="readonly">
-                                <input type="button" id="btonea" name="btone" class="btn" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" value="Selecionar" />
-                                <!--Anexosfim-->
-                            </div>
                             <div class="container" style="width: 400px;padding-top: 5px;padding-left: 0px;padding-right: 0px;">
+                              <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
+                              <input type="text" name="txt01" id="txt01" class="file" placeholder="Anexo I - Requerimento INSS" readonly="readonly">
+                              <input type="button" id="btonea" name="btone" class="btn" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" value="Selecionar" />
                                 <!--Anexos Inicio-->
                                 <input type="file" name="sel02" id="sel02" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt02" id="txt02" class="file" placeholder="Anexo II - TCMS" readonly="readonly">
                                 <input type="button" id="btoneb" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" class="btn" value="Selecionar" />
                                 <!--Anexosfim-->
-                                <!--Anexos Inicio-->
+                                <!--Anexos Inicio Carteiras-->
                                 <input type="file" name="sel03" id="sel03" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt03" id="txt03" class="file" placeholder="Carterinha (Frente)" readonly="readonly">
                                 <input type="button" id="btonec" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" class="btn" value="Selecionar" />
