@@ -4,7 +4,7 @@ $logo = "https://inssdigital.oabam.org.br/";
 //Principal
 $emitir = "https://inssdigital.oabam.org.br/emitir/";
 $enviar = "https://inssdigital.oabam.org.br/enviar/";
-//Ano test
+//Ano
 $ano = "2019";
 //Menu Superior
 $suporte ="https://inssdigital.oabam.org.br/suporte";
