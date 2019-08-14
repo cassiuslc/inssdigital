@@ -185,17 +185,6 @@ $voltar = "https://inssdigital.oabam.org.br";
                             <small id="emailHelp" class="form-text text-muted">&nbsp;&nbsp;&nbsp;Nunca vamos compartilhar seus dados, com ninguém.</small>
                         </div>
                         <!-- Campos Endereços-->
-
-                        <div class="row">
-                            <div class="col">
-                                <label style="padding-top: 7px;" for="oab_rua">Rua</label>
-                                <input type="text" id="oab_rua" name="rua" class="form-control" placeholder="">
-                            </div>
-                            <div class="col">
-                                <label style="padding-top: 7px;" for="oab_num">Número</label>
-                                <input type="text" id="oab_num" name="num" class="form-control">
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="col">
                                 <label style="padding-top: 5px;" for="oab_bairro">Bairro</label>
