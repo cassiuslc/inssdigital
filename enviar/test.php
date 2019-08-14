@@ -12,6 +12,25 @@ if(isset($_SESSION['aviso'])){
    else if($_SESSION['aviso']==sha1('INSS-EMF03'))$aviso = "INSS-EMF03";
    else if($_SESSION['aviso']==sha1('INSS-ERR04'))$aviso = "INSS-ERR04";
    else if($_SESSION['aviso']==sha1('INSS-EUF05'))$aviso = "INSS-EUF05";
+   //Arquivos
+    //sel01
+    if($_SESSION['aviso']==sha1('vazio-mais'))$aviso="vazio-mais";
+    if($_SESSION['aviso']==sha1('ERROARQ'))$aviso="ERROARQ";
+    if($_SESSION['aviso']==sha1('tipo-sel01'))$aviso="tipo-sel01";
+    if($_SESSION['aviso']==sha1('vazio-sel01'))$aviso="vazio-sel01";
+    if($_SESSION['aviso']==sha1('tam-sel01'))$aviso="tam-sel01";
+    //sel02
+    if($_SESSION['aviso']==sha1('tipo-sel02'))$aviso="tipo-sel02";
+    if($_SESSION['aviso']==sha1('vazio-sel02'))$aviso="vazio-sel02";
+    if($_SESSION['aviso']==sha1('tam-sel02'))$aviso="tam-sel02";
+    //sel03
+    if($_SESSION['aviso']==sha1('tipo-sel03'))$aviso="tipo-sel03";
+    if($_SESSION['aviso']==sha1('vazio-sel03'))$aviso="vazio-sel03";
+    if($_SESSION['aviso']==sha1('tam-sel03'))$aviso="tam-sel03";
+    //sel04
+    if($_SESSION['aviso']==sha1('tipo-sel04'))$aviso="tipo-sel04";
+    if($_SESSION['aviso']==sha1('vazio-sel04'))$aviso="vazio-sel04";
+    if($_SESSION['aviso']==sha1('tam-sel04'))$aviso="tam-sel04";
    session_destroy(); //Destruir Session
 }
 //Menssagem de Sucesso
@@ -122,13 +141,108 @@ $voltar = "https://inssdigital.oabam.org.br";
 
          <?php if($aviso=="INSS-EMF03"){ ?>
          <div class="alert alert-warning alert-dismissible fade show mx-auto text-center" role="alert">
-         <strong>INSS Digital enviado!</strong> entretanto ocorreu uma falha ao enviar seu e-mail de confirmação.
+         <strong>INSS Digital enviado!</strong> entretanto ocorreu uma falha ao enviar seu e-mail de confirmação (Aguarde nosso contato).
              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
              </button>
          </div>
          <?php } ?>
 
+         <?php if($aviso=="vazio-mais"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>Anexos Não Enviados!</strong> Um ou mais Anexos não foram enviados. (Tente Novamente)
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+
+         <?php if($aviso=="ERROARQ"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>[Cod: <?php if(isset($erroarq)){echo $erroarq;} else {echo "OAB-X";} ?>]Ocorreu um erro desconhecido no upload de um dos anexos!</strong> Tente novamente ou entre em contato com suporte.
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <!--Alerta Anexo -->
+         <?php if($aviso=="tipo-sel01"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>Arquivo incompatível!</strong> O Tipo de arquivo do requerimento INSS (Anexo 1) não foi aceito, Somente PDF;
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <?php if($aviso=="vazio-sel01"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>Arquivo Não Enviado!</strong> Por Favor faça upload do Requerimento INSS (Anexo 1).
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <?php if($aviso=="tam-sel01"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>O Requerimento INSS (Anexo 1)!</strong> Ultrapassou o limite de Upload permitido na platarforma do INSS Digital [10mb].
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <!-- FIM Alerta Anexo -->
+         <!--Alerta Anexo -->
+         <?php if($aviso=="tipo-sel02"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>Arquivo incompatível!</strong> O Tipo de arquivo do TCMS (Anexo 2) não foi aceito, Somente PDF;
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <?php if($aviso=="vazio-sel02"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>Arquivo Não Enviado!</strong> Por Favor faça upload do TCMS (Anexo 2).
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <?php if($aviso=="tam-sel03"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>A Carterinha (Frente)!</strong> Ultrapassou o limite de Upload permitido na platarforma do INSS Digital [10mb].
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <!-- FIM Alerta Anexo -->
+         <!--Alerta Anexo -->
+         <?php if($aviso=="tipo-sel04"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>Arquivo incompatível!</strong> O Tipo de arquivo da Carterinha (Verso) não foi aceito, Somente PDF;
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <?php if($aviso=="vazio-sel04"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>Arquivo Não Enviado!</strong> Por Favor faça upload da Carterinha (Verso).
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <?php if($aviso=="tam-sel04"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>A Carterinha (Verso)!</strong> Ultrapassou o limite de Upload permitido na platarforma do INSS Digital [10mb].
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <!-- FIM Alerta Anexo -->
          <?php if($aviso=="INSS-SU001"){ ?>
          <div class="alert alert-success alert-dismissible fade show mx-auto text-center" role="alert">
          <strong>INSS Digital emitido!</strong> Agora e so imprimir assinar e enviar ao INSS.
@@ -140,7 +254,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 <?php }else{ ?>
 
              <div class="alert alert-info alert-dismissible fade show mx-auto text-center" role="alert">
-                 <strong>[Aviso] Apos emitir e assinar os documentos!</strong> Retorne ao <a style="text-decoration: underline;" class="alert-link" href="https://inssdigital.oabam.org.br">inssdigital.oabam.org.br</a> para <a style="text-decoration: underline;" class="alert-link" href="../enviar">enviar</a> ao INSS.
+                 <strong>[Atenção] Fique de olho no seu e-mail. </strong>  Temos um prazo de ate 5 dias uteis para envio, entretanto pode ocorrer mais cedo (A senha provisoria tem duração de 24 horas).
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                  </button>
