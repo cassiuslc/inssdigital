@@ -189,7 +189,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                             <div class="container" style="width:400px;padding-top:5px;padding-left: 0px;padding-right: 0px;">
                                 <!--Anexos Inicio-->
                                 <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
-                                <input type="text" name="txt01" id="txt01" class="file" placeholder="Requerimento INSS" readonly="readonly">
+                                <input type="text" name="txt01" id="txt01" class="file" placeholder="Anexo I - Requerimento INSS" readonly="readonly">
                                 <input type="button" id="btonea" name="btone" class="btn" value="SELECIONAR" />
                                 <script type="text/javascript">
                                     $(function(){
@@ -229,6 +229,49 @@ $voltar = "https://inssdigital.oabam.org.br";
                                             }else {
                                                 var fileName = $(this)[0].files[0].name;
                                                 $('#txt02').val(fileName);
+                                            }
+                                        });});
+                                </script>
+                                <!--Anexosfim-->
+                                <!--Anexos Inicio-->
+                                <input type="file" name="sel03" id="sel03" class="arquivo" accept=".pdf">
+                                <input type="text" name="txt03" id="txt03" class="file" placeholder="Carterinha (Frente)" readonly="readonly">
+                                <input type="button" id="btonec" name="btone" class="btn" value="SELECIONAR" />
+                                <script type="text/javascript">
+                                    $(function(){
+                                        $("#btonec").click(function(){
+                                            $('#sel03').trigger('click');
+                                        });
+                                        $('#sel03').on('change', function() {
+                                            if ($('#sel03').get(0).files.length) {
+                                                var fileSize = $('#sel03').get(0).files[0].size; // in bytes
+                                            }
+                                            if(fileSize >10000000){
+                                                $('#txt03').val("Limite Exedido");
+                                            }else {
+                                                var fileName = $(this)[0].files[0].name;
+                                                $('#txt03').val(fileName);
+                                            }
+                                        });});
+                                </script>
+
+                                <input type="file" name="sel04" id="sel04" class="arquivo" accept=".pdf">
+                                <input type="text" name="txt04" id="txt04" class="file" placeholder="Carterinha (Verso)" readonly="readonly">
+                                <input type="button" id="btoned" name="btone" class="btn" value="SELECIONAR" />
+                                <script type="text/javascript">
+                                    $(function(){
+                                        $("#btoned").click(function(){
+                                            $('#sel04').trigger('click');
+                                        });
+                                        $('#sel04').on('change', function() {
+                                            if ($('#sel04').get(0).files.length) {
+                                                var fileSize = $('#sel04').get(0).files[0].size; // in bytes
+                                            }
+                                            if(fileSize >10000000){
+                                                $('#txt04').val("Limite Exedido");
+                                            }else{
+                                                var fileName = $(this)[0].files[0].name;
+                                                $('#txt04').val(fileName);
                                             }
                                         });});
                                 </script>
