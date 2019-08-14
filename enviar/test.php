@@ -190,7 +190,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 <!--Anexos Inicio-->
                                 <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt01" id="txt01" class="file" placeholder="Anexo I - Requerimento INSS" readonly="readonly">
-                                <input type="button" id="btonea" name="btone" class="btn" value="SELECIONAR" />
+                                <input type="button" id="btonea" name="btone" class="btn" style="font: 400 16px Oswald;" value="SELECIONAR" />
                                 <script type="text/javascript">
                                     $(function(){
                                         $("#btonea").click(function(){
