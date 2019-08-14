@@ -190,7 +190,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 <!--Anexos Inicio-->
                                 <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt01" id="txt01" class="file" placeholder="Anexo I - Requerimento INSS" readonly="readonly">
-                                <input type="button" id="btonea" name="btone" class="btn" style="font: 400 16px Oswald;" value="SELECIONAR" />
+                                <input type="button" id="btonea" name="btone" class="btn" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" value="Selecionar" />
                                 <script type="text/javascript">
                                     $(function(){
                                         $("#btonea").click(function(){
@@ -214,7 +214,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 <!--Anexos Inicio-->
                                 <input type="file" name="sel02" id="sel02" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt02" id="txt02" class="file" placeholder="Anexo II - TCMS" readonly="readonly">
-                                <input type="button" id="btoneb" name="btone" class="btn" value="SELECIONAR" />
+                                <input type="button" id="btoneb" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" class="btn" value="Selecionar" />
                                 <script type="text/javascript">
                                     $(function(){
                                         $("#btoneb").click(function(){
@@ -236,7 +236,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 <!--Anexos Inicio-->
                                 <input type="file" name="sel03" id="sel03" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt03" id="txt03" class="file" placeholder="Carterinha (Frente)" readonly="readonly">
-                                <input type="button" id="btonec" name="btone" class="btn" value="SELECIONAR" />
+                                <input type="button" id="btonec" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" class="btn" value="Selecionar" />
                                 <script type="text/javascript">
                                     $(function(){
                                         $("#btonec").click(function(){
@@ -257,7 +257,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 
                                 <input type="file" name="sel04" id="sel04" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt04" id="txt04" class="file" placeholder="Carterinha (Verso)" readonly="readonly">
-                                <input type="button" id="btoned" name="btone" class="btn" value="SELECIONAR" />
+                                <input type="button" id="btoned" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 20px;padding-right: 20px;" class="btn" value="Selecionar" />
                                 <script type="text/javascript">
                                     $(function(){
                                         $("#btoned").click(function(){
