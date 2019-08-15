@@ -396,7 +396,7 @@ div[style*="margin: 16px 0;"] { margin: 0 !important; }
         $mail->Password = $serversenha; // SMTP password
         $mail->From = $servermail; // De
         //$mail->AddAddress($servermail, $nome);
-        $mail->AddAddress("informatica@oabam.org.br", $nome); // Email e nome de quem receberá //Responder
+        $mail->AddAddress("previdenciario@oabam.org.br", $nome); // Email e nome de quem receberá //Responder
         $mail->FromName = "INSS Digital (OAB/AM)"; // Nome de quem envia o email
         $mail->IsHTML = true; // Enviar como HTML
         //$mail->AddBcc($servermail); //cc Email
