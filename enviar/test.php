@@ -321,7 +321,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 <!--Anexosfim-->
                                 </div>
                                 </div>
-                        <div class="container" style="width: 330px;padding-top: 15px;">
+                        <div class="container" style="width: 330px;">
                         <div class="g-recaptcha" style="margin-top: 0px;margin-bottom: 0px;" data-sitekey="6Legp6wUAAAAAFzO3aF3Oap-jwZb1Q-tZrEnx9fx"></div>
                         </div>
                             <!-- Campos Endereços FIM-->
