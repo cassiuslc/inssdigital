@@ -245,7 +245,7 @@ $voltar = "https://inssdigital.oabam.org.br";
          <!-- FIM Alerta Anexo -->
          <?php if($aviso=="INSS-SU001"){ ?>
          <div class="alert alert-success alert-dismissible fade show mx-auto text-center" role="alert">
-         <strong>INSS Digital emitido!</strong> Enviamos um e-mail automatico de confirmação cadastro.
+         <strong>INSS Digital enviado com sucesso!</strong> Enviamos um e-mail de confirmação com mais informações.
              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
              </button>
@@ -254,7 +254,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 <?php }else{ ?>
 
              <div class="alert alert-info alert-dismissible fade show mx-auto text-center" role="alert">
-                 <strong>[Atenção] Temos um prazo de até 5 dias uteis para envio.</strong> Fique de olho no seu e-mail pois a senha provisória tem duração de 24 horas.
+                 <strong>[Atenção] O envio pode demorar um pouco, aguarde.</strong> Além disso fique de olho no seu e-mail pois a senha provisória tem duração de 24 horas.
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                  </button>
