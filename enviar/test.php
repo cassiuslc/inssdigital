@@ -284,7 +284,6 @@ $voltar = "https://inssdigital.oabam.org.br";
                                     <input type="text" id="oab_cpf" name="email" class="form-control" placeholder="Digite seu CPF">
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col">
                                     <label for="oab_tel" style="padding-top: 7px;">Telefone</label>
@@ -295,7 +294,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                                     <input type="text" id="oab_email" name="email" class="form-control" placeholder="Digite seu email">
                                 </div>
                             </div>
-                            <small id="emailHelp" class="form-text text-muted">&nbsp;&nbsp;&nbsp;Nunca vamos compartilhar seus dados, com ninguém.</small>
+                            <label style="padding-top: 7px;">Anexos</label>
                         <!-- Campos Endereços-->
                               <div class="container" style="display: table;width: 90%;">
                               <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
