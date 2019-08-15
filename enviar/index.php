@@ -296,25 +296,25 @@ $voltar = "https://inssdigital.oabam.org.br";
                             </div>
                             <label style="padding-top: 7px;">Anexos</label>
                         <!-- Campos Endereços-->
-                              <div class="container" style="display: table;width: 90%;">
+                              <div class="container" style="display: table;width: 100%;">
                               <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
                               <input type="text" name="txt01" id="txt01" class="file rounded-left" placeholder="Anexo I - Requerimento INSS" readonly="readonly">
                               <input type="button" id="btonea" name="btone" class="btnn rounded-right" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" value="Selecionar" />
                               </div>
-                              <div class="container" style="display: table;width: 90%;">
+                              <div class="container" style="display: table;width: 100%;">
                                <!--Anexos Inicio-->
                                 <input type="file" name="sel02" id="sel02" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt02" id="txt02" class="file rounded-left" placeholder="Anexo II - TCMS" readonly="readonly">
                                 <input type="button" id="btoneb" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
                                 </div>
                                 <!--Anexosfim-->
-                                <div class="container" style="display: table;width: 90%;">
+                                <div class="container" style="display: table;width: 100%;">
                                 <!--Anexos Inicio Carteiras-->
                                 <input type="file" name="sel03" id="sel03" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt03" id="txt03" class="file rounded-left" placeholder="Anexo III - Carterinha (Frente)" readonly="readonly">
                                 <input type="button" id="btonec" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
                                 </div>
-                                <div class="container" style="display: table;width: 90%;">
+                                <div class="container" style="display: table;width: 100%;">
                                 <input type="file" name="sel04" id="sel04" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt04" id="txt04" class="file rounded-left" placeholder="Anexo IV - Carterinha (Verso)" readonly="readonly">
                                 <input type="button" id="btoned" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
