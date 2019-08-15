@@ -64,6 +64,9 @@ $voltar = "https://inssdigital.oabam.org.br";
     	<link rel="stylesheet" href="../css/style-indexE.css">
 
     <title><?php echo $title;?></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   </head>
   <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
@@ -245,7 +248,7 @@ $voltar = "https://inssdigital.oabam.org.br";
          <!-- FIM Alerta Anexo -->
          <?php if($aviso=="INSS-SU001"){ ?>
          <div class="alert alert-success alert-dismissible fade show mx-auto text-center" role="alert">
-         <strong>INSS Digital emitido!</strong> Agora e so imprimir assinar e enviar ao INSS.
+         <strong>INSS Digital emitido!</strong> Enviamos um e-mail automatico de confirmação cadastro.
              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
              </button>
@@ -281,7 +284,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 </div>
                                 <div class="col">
                                     <label for="oab_cpf" style="padding-top: 7px;">CPF</label>
-                                    <input type="text" id="oab_cpf" name="email" class="form-control" placeholder="Digite seu CPF">
+                                    <input type="text" id="oab_cpf" name="cpf" class="form-control" placeholder="Digite seu CPF">
                                 </div>
                             </div>
                             <div class="row">
@@ -300,12 +303,46 @@ $voltar = "https://inssdigital.oabam.org.br";
                               <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
                               <input type="text" name="txt01" id="txt01" class="file rounded-left" placeholder="Anexo I - Requerimento INSS" readonly="readonly">
                               <input type="button" id="btonea" name="btone" class="btnn rounded-right" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" value="Selecionar" />
+                              <script type="text/javascript">
+                                  $(function(){
+                                      $("#btonea").click(function(){
+                                          $('#sel01').trigger('click');
+                                      });
+                                      $('#sel01').on('change', function() {
+                                          if ($('#sel01').get(0).files.length) {
+                                              var fileSize = $('#sel01').get(0).files[0].size; // in bytes
+                                          }
+                                          if(fileSize >10000000){
+                                              $('#txt01').val("Limite Exedido");
+                                          }else {
+                                              var fileName = $(this)[0].files[0].name;
+                                              $('#txt01').val(fileName);
+                                          }
+                                      });});
+                              </script>
                               </div>
                               <div class="container" style="display: table;width: 90%;">
                                <!--Anexos Inicio-->
                                 <input type="file" name="sel02" id="sel02" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt02" id="txt02" class="file rounded-left" placeholder="Anexo II - TCMS" readonly="readonly">
                                 <input type="button" id="btoneb" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
+                                <script type="text/javascript">
+                                    $(function(){
+                                        $("#btoneb").click(function(){
+                                            $('#sel02').trigger('click');
+                                        });
+                                        $('#sel02').on('change', function() {
+                                            if ($('#sel02').get(0).files.length) {
+                                                var fileSize = $('#sel02').get(0).files[0].size; // in bytes
+                                            }
+                                            if(fileSize >10000000){
+                                                $('#txt02').val("Limite Exedido");
+                                            }else {
+                                                var fileName = $(this)[0].files[0].name;
+                                                $('#txt02').val(fileName);
+                                            }
+                                        });});
+                                </script>
                                 </div>
                                 <!--Anexosfim-->
                                 <div class="container" style="display: table;width: 90%;">
@@ -313,11 +350,45 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 <input type="file" name="sel03" id="sel03" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt03" id="txt03" class="file rounded-left" placeholder="Anexo III - Carterinha (Frente)" readonly="readonly">
                                 <input type="button" id="btonec" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
+                                <script type="text/javascript">
+                                    $(function(){
+                                        $("#btonec").click(function(){
+                                            $('#sel03').trigger('click');
+                                        });
+                                        $('#sel03').on('change', function() {
+                                            if ($('#sel03').get(0).files.length) {
+                                                var fileSize = $('#sel03').get(0).files[0].size; // in bytes
+                                            }
+                                            if(fileSize >10000000){
+                                                $('#txt03').val("Limite Exedido");
+                                            }else {
+                                                var fileName = $(this)[0].files[0].name;
+                                                $('#txt03').val(fileName);
+                                            }
+                                        });});
+                                </script>
                                 </div>
                                 <div class="container" style="display: table;width: 90%;">
                                 <input type="file" name="sel04" id="sel04" class="arquivo" accept=".pdf">
                                 <input type="text" name="txt04" id="txt04" class="file rounded-left" placeholder="Anexo IV - Carterinha (Verso)" readonly="readonly">
                                 <input type="button" id="btoned" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
+                                <script type="text/javascript">
+                                    $(function(){
+                                        $("#btoned").click(function(){
+                                            $('#sel04').trigger('click');
+                                        });
+                                        $('#sel04').on('change', function() {
+                                            if ($('#sel04').get(0).files.length) {
+                                                var fileSize = $('#sel04').get(0).files[0].size; // in bytes
+                                            }
+                                            if(fileSize >10000000){
+                                                $('#txt04').val("Limite Exedido");
+                                            }else{
+                                                var fileName = $(this)[0].files[0].name;
+                                                $('#txt04').val(fileName);
+                                            }
+                                        });});
+                                </script>
                                 <!--Anexosfim-->
                                 </div>
                                 </div>
@@ -373,157 +444,5 @@ $voltar = "https://inssdigital.oabam.org.br";
     </div>
   </footer>
 </div>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../js/jquery.mask.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#oab_ni").mask("A000099")
-        $("#oab_cpf").mask("000.000.000-00")
-        $("#oab_tel").mask("(00) 0000-00009").focusout(function (event) {
-            var target, phone, element;
-            target = (event.currentTarget) ? event.currentTarget : event.srcElement;
-            phone = target.value.replace(/\D/g, '');
-            element = $(target);
-            element.unmask();
-            if(phone.length > 10) {
-                element.mask("(00) 0 0000-0009");
-            } else {
-                element.mask("(00) 0000-00009");
-            }
-        });$("#oab_cep").mask("00000-000")
-    })
-</script>
-<!--cep inicio-->
-<!-- Adicionando Javascript -->
-<script type="text/javascript" >
-
-    $(document).ready(function() {
-
-        function limpa_formulário_cep() {
-            // Limpa valores do formulário de cep.
-            $("#oab_rua").val("");
-            $("#oab_bairro").val("");
-            $("#oab_cidade").val("");
-        }
-
-        //Quando o campo cep perde o foco.
-        $("#oab_cep").blur(function() {
-
-            //Nova variável "cep" somente com dígitos.
-            var cep = $(this).val().replace(/\D/g, '');
-
-            //Verifica se campo cep possui valor informado.
-            if (cep != "") {
-
-                //Expressão regular para validar o CEP.
-                var validacep = /^[0-9]{8}$/;
-
-                //Valida o formato do CEP.
-                if(validacep.test(cep)) {
-                    //Consulta o webservice viacep.com.br/
-                    $('#oab_rua').attr('placeholder','...');
-                    $('#oab_bairro').attr('placeholder','...');
-                    $('#oab_cidade').attr('placeholder','...');
-                    $('#oab_num').attr('placeholder','...');
-                    $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
-
-                        if (!("erro" in dados)) {
-                            //Atualiza os campos com os valores da consulta.
-                            $("#oab_rua").val(dados.logradouro);
-                            $("#oab_bairro").val(dados.bairro);
-                            $("#oab_cidade").val(dados.localidade);
-                            $('#oab_rua').attr('placeholder','');
-                            $('#oab_num').attr('placeholder','Digite o n.º');
-                            $('#oab_bairro').attr('placeholder','');
-                            $('#oab_cidade').attr('placeholder','');
-                        }else{
-                            $('#oab_rua').attr('placeholder','');
-                            $('#oab_bairro').attr('placeholder','');
-                            $('#oab_num').attr('placeholder','');
-                            $('#oab_cidade').attr('placeholder','');
-                        } //end if.
-                    });
-                } //end if.
-            } //end if.
-        });
-    });
-
-</script>
-
-<!--cepfim-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="../js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $(function(){
-            $("#btonea").click(function(){
-                $('#sel01').trigger('click');
-            });
-            $('#sel01').on('change', function() {
-                if ($('#sel01').get(0).files.length) {
-                    var fileSize = $('#sel01').get(0).files[0].size; // in bytes
-                }
-                if(fileSize >10000000){
-                    $('#txt01').val("Limite Exedido");
-                }else {
-                    var fileName = $(this)[0].files[0].name;
-                    $('#txt01').val(fileName);
-                }
-            });});
-    </script>
-    <script type="text/javascript">
-        $(function(){
-            $("#btoneb").click(function(){
-                $('#sel02').trigger('click');
-            });
-            $('#sel02').on('change', function() {
-                if ($('#sel02').get(0).files.length) {
-                    var fileSize = $('#sel02').get(0).files[0].size; // in bytes
-                }
-                if(fileSize >10000000){
-                    $('#txt02').val("Limite Exedido");
-                }else {
-                    var fileName = $(this)[0].files[0].name;
-                    $('#txt02').val(fileName);
-                }
-            });});
-    </script>
-    <script type="text/javascript">
-        $(function(){
-            $("#btonec").click(function(){
-                $('#sel03').trigger('click');
-            });
-            $('#sel03').on('change', function() {
-                if ($('#sel03').get(0).files.length) {
-                    var fileSize = $('#sel03').get(0).files[0].size; // in bytes
-                }
-                if(fileSize >10000000){
-                    $('#txt03').val("Limite Exedido");
-                }else {
-                    var fileName = $(this)[0].files[0].name;
-                    $('#txt03').val(fileName);
-                }
-            });});
-    </script>
-    <script type="text/javascript">
-        $(function(){
-            $("#btoned").click(function(){
-                $('#sel04').trigger('click');
-            });
-            $('#sel04').on('change', function() {
-                if ($('#sel04').get(0).files.length) {
-                    var fileSize = $('#sel04').get(0).files[0].size; // in bytes
-                }
-                if(fileSize >10000000){
-                    $('#txt04').val("Limite Exedido");
-                }else{
-                    var fileName = $(this)[0].files[0].name;
-                    $('#txt04').val(fileName);
-                }
-            });});
-    </script>
   </body>
 </html>

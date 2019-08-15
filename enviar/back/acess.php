@@ -548,50 +548,49 @@ div[style*="margin: 16px 0;"] { margin: 0 !important; }
         </td>
     </tr>
     <tr>
-        <td align="center" height="100%" valign="top" width="100%" bgcolor="#f6f6f6" style="padding: 40px 15px;">
-            <!--[if (gte mso 9)|(IE)]>
-            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
-            <tr>
-            <td align="center" valign="top" width="600">
-            <![endif]-->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;font-family:Arial, Helvetica, sans-serif;">
-                <h3 style="font-family:Arial, Helvetica, sans-serif;">Dados Recebidos</h3>
-                <div style="font-family:Arial, Helvetica, sans-serif;"><b>Nome:</b> &nbsp;'.$nome.'<br>
-                    <b>Nº de Inscrição:</b> &nbsp;'.$ni.'<br>
-                    <b>CPF:</b> &nbsp;'.$cpf.'<br>
-                    <b>Telefone:</b> &nbsp;'.$tel.'<br>
-                    <b>E-Mail:</b> &nbsp;'.$email.'<br><br>
-                    <b>Dia:</b> &nbsp;'.$data_envio.'<b>&nbsp; &bull; &nbsp;Hora:</b>&nbsp; '.$hora_envio.'<br><br><br>
-                    <b>E-mail Automatico Não responda - Contato via email: previdenciario@oabam.org.br </b>
-                    </div>
-                <td align="center" valign="top" style="padding: 0; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #999999;">
-                        <p style="font-size: 14px; line-height: 20px;">
-                            OAB Amazonas<br>
-                          Av. Umberto Calderaro Filho, nº 2000<br>
-                          Bairro Adrianópolis &nbsp; &bull; &nbsp; CEP 69057-021
-                         <br>   ouvidoria@oabam.org.br
-                          <br><br>
+    <td align="center" height="100%" valign="top" width="100%" bgcolor="#f6f6f6" style="padding: 40px 15px;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+        <tr>
+        <td align="center" valign="top" width="600">
+        <![endif]-->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;font-family:Arial, Helvetica, sans-serif;">
+            <h3 style="font-family:Arial, Helvetica, sans-serif;">Dados Recebidos</h3>
+            <div style="font-family:Arial, Helvetica, sans-serif;"><b>Nome:</b> &nbsp;'.$nome.'<br>
+                <b>Nº de Inscrição:</b> &nbsp;'.$ni.'<br>
+                <b>CPF:</b> &nbsp;'.$cpf.'<br>
+                <b>Telefone:</b> &nbsp;'.$tel.'<br>
+                <b>E-Mail:</b> &nbsp;'.$email.'<br><br>
+                <b>Dia:</b> &nbsp;'.$data_envio.'<b>&nbsp; &bull; &nbsp;Hora:</b>&nbsp; '.$hora_envio.'<br>
+                <b>E-mail Automatico Não responda</b>&nbsp; &bull; &nbsp;Contato via email: </b>previdenciario@oabam.org.br</b>.
+                </td>
+             </div>
+            <td align="center" valign="top" style="padding: 0; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #999999;">
+                    <p style="font-size: 14px; line-height: 20px;">
+                        OAB Amazonas<br>
+                      Av. Umberto Calderaro Filho, nº 2000<br>
+                      Bairro Adrianópolis &nbsp; &bull; &nbsp; CEP 69057-021
+                     <br>   ouvidoria@oabam.org.br
+                      <br><br>
 
-                          <a href="http://oabam.org.br/site/" style="color: #999999;" target="_blank">OAB Amazonas</a>
-                          &nbsp; &bull; &nbsp;
-                          <a href="http://oabam.org.br/site/ouvidoria/" style="color: #999999;" target="_blank">Ouvidoria</a>
-                        </p>
-                        <p style="font-size: 14px; line-height: 20px;">
-                    </td>
-                </tr>
-            </table>
-            <!--[if (gte mso 9)|(IE)]>
-            </td>
+                      <a href="http://oabam.org.br/site/" style="color: #999999;" target="_blank">OAB Amazonas</a>
+                      &nbsp; &bull; &nbsp;
+                      <a href="http://oabam.org.br/site/ouvidoria/" style="color: #999999;" target="_blank">Ouvidoria</a>
+                    </p>
+                    <p style="font-size: 14px; line-height: 20px;">
+                </td>
             </tr>
-            </table>
-            <![endif]-->
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
         </td>
-    </tr>
+        </tr>
+        </table>
+        <![endif]-->
+    </td>
+</tr>
 </table>
 </body>
 </html>
-
-
 ';//Fim do Corpo do Email
 
             $mail = new PHPMailer();
