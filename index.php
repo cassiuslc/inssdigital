@@ -88,7 +88,7 @@ $contato = "https://inssdigital.oabam.org.br/contato";
           <li><b style="color: #154259;font-weight: 400; font-size: 20px;">A carterinha da OAB (Frente/Verso).</b></li>
           <li><b style="color: #154259;font-weight: 400; font-size: 20px;">Os termos emitidos e assinados (PDF).</b></li>
         </ul>
-        <a href="<?php if(!(isset($mant))){ echo $enviar;}else{echo "#";}?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-primary"><?php if(!(isset($mant))){echo "Enviar INSS Digital";} else {echo "Manutenção";} ?></a>
+        <a href="<?php if(!(isset($mant))){ echo $enviar;}else{echo "#";}?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-primary" ><?php if(!(isset($mant))){echo "Enviar INSS Digital";} else {echo "Manutenção";} ?></a>
       </div>
     </div>
   </div>
