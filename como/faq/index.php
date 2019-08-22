@@ -126,7 +126,16 @@ $contato = "https://inssdigital.oabam.org.br/contato";
             </div>
             <div id="collapseTres" class="collapse" aria-labelledby="headingTres" data-parent="#accordion">
                 <div class="card-body">
-                  <p>Acesse a <a href="inssdigital.oabam.org.br">inssdigital.oabam.org.br</a>, procure a guia “Emitir”.</p>
+                  <p>Acesse o site <a href="inssdigital.oabam.org.br">inssdigital.oabam.org.br</a>, procure a guia “Emitir”.</p>
+                  <p>- Em seguida você deve preencher os dados solicitados</p>
+                  <p>- Clicar na opção "Eu não sou um robo" </p>
+                  <p>- E então clicar em emitir</p><br>
+                  <p>Sera gerado, <b>um unico PDF</b> contendo 2 (duas) páginas:</p>
+                  <p>Cada página representa 1 (um) documento.</p>
+                  <p>- A 1ª (Primeira página) e o Requerimento ao INSS Digital.</p>
+                  <p>- A 2ª (Segunda página) e o "TCMS" ou Termo de Compromisso e Manutenção de Sigilo.</p>
+                  <p><b>** Verifique seus dados, pois se trata de um documento oficial.</b></p>
+
                 </div>
             </div>
         </div>
@@ -138,7 +147,68 @@ $contato = "https://inssdigital.oabam.org.br/contato";
             </div>
             <div id="collapseQuatro" class="collapse" aria-labelledby="headingTres" data-parent="#accordion">
                 <div class="card-body">
-                  <p>Texto de test da oabam em uma pagina de test. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Leia mais.</a></p>                </div>
+                  <p> Caso seus dados estejam <b>incorretos no e-mail de confirmação</b> que voce recebeu mas estejam <b>corretos nos documentos enviados (Anexos)</b>:<p>
+                  <p>- Apenas entrar em contato e informar o erro ja resolve o problema, neste caso de preferencia ao contato via telefone.</p><br>
+                  <p>Caso seus dados estejam <b>corretos no e-mail de confirmação</b>, mas <b>incorretos nos documentos enviados (Anexos)</b>:</p>
+                  <p>- Faça novamento o a emição dos documentos no guia "Emitir". </p>
+                  <p>- Então voce deve enviar um email para <b>previdenciario@oabam.org.br</b>.</p>
+                  <p>- Assunto: [SUA-OAB][Correcao] Erro no dados dos documentos enviados.</p>
+                  <p>- Preencha o campo SUA-OAB com o numero de inscrição da sua OAB.</p>
+                  <p>- Anexe os 4 arquivos PDF nesse e-mail:</p>
+                  <p>[Arquivo 1] Requerimento INSS Digital (Esse arquivo esta pagina 1 do PDF, ele deve estar assinado e escaneado)</p>
+                  <p>[Arquivo 2] TCMS ou Termo de Compromisso e Manutenção de Sigilo (Esse arquivo esta pagina 2 do PDF, ele deve estar assinado e escaneado)</p>
+                  <p>[Arquivo 3] Carterinha Frente (Escaneado)</p>
+                  <p>[Arquivo 4] Carterinha Verso (Escaneado)</p>
+                  <p>- Em seguida, envie o email.</p>
+                  <br>
+                  <p><b>** Atenção: o envio desse pedido dever ser feito pelo seu proprio e-mail (Ex: gmail,hotmail etc), Não serão aceitos fotos dos documentos apenas escaneados.</b></p>
+                  <p><b>** Caso seus dados estejam errados tanto nos documentos quanto no email de confirmação, E muito importante que voce entre em <a href="inssdigital.oabam.org.br/contato">contato</a>, com a comissão de direito previdenciario.</b> </p>
+                            </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingCinco">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-faq collapsed" data-toggle="collapse" data-target="#collapseCinco"><i class="fa fa-plus"></i> Quem pode ter acesso ?</button>
+                </h2>
+            </div>
+            <div id="collapseCinco" class="collapse" aria-labelledby="headingCinco" data-parent="#accordion">
+                <div class="card-body">
+                  <p>Advogados inscritos na Ordem dos Advogados do Brasil - Secional do Amazonas, desde que ativos, adimplentes e que não se encontrem punidos pela OAB AM ou que não estejam conhecidamente com condenação criminal, respeitada a cláusula de limitação territorial, conforme item 03 (três) do <a href="#">Plano de Trabalho</a> firmado entre as partes. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingSeis">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-faq collapsed" data-toggle="collapse" data-target="#collapseSeis"><i class="fa fa-plus"></i> Como se cadastrar ?</button>
+                </h2>
+            </div>
+            <div id="collapseSeis" class="collapse" aria-labelledby="headingSeis" data-parent="#accordion">
+                <div class="card-body">
+
+                  <p>Acesse o site <a href="inssdigital.oabam.org.br">inssdigital.oabam.org.br</a>, procure a guia <b>“Emitir”</b>.</p>
+                  <p>- Em seguida você deve preencher os dados solicitados e emitir um PDF contendo 2 (duas) páginas.</p>
+                  <p>- A 1ª (Primeira página) e o Requerimento ao INSS Digital.</p>
+                  <p>- A 2ª (Segunda página) e o "TCMS" ou Termo de Compromisso e Manutenção de Sigilo.</p>
+                  <p><b>Você deve imprimir as duas páginas, conferir se seus dados estão correto (essa etapa e de extrema importância) e assinar (a mão) ambas as página.</b></p>
+
+                  <br>
+                  <p>Acesse o site <a href="inssdigital.oabam.org.br">inssdigital.oabam.org.br</a>, procure a guia <b>“Enviar”</b>.</p>
+                  <p>- Em seguida você deve preencher os dados solicitados.</p>
+                  <p>- E anexar os 4 documentos solicitados: </b>.</p>
+                  <p>[Arquivo 1] Requerimento INSS Digital (Esse arquivo esta pagina 1 do PDF, ele deve estar assinado e escaneado)</p>
+                  <p>[Arquivo 2] TCMS ou Termo de Compromisso e Manutenção de Sigilo (Esse arquivo esta pagina 2 do PDF, ele deve estar assinado e escaneado)</p>
+                  <p>[Arquivo 3] Carterinha Frente (Escaneado)</p>
+                  <p>[Arquivo 4] Carterinha Verso (Escaneado)</p>
+                  <p><b>** Atenção: Não serão aceitos fotos dos documentos apenas escaneados.</b></p><br>
+                  <p>Após Anexar os 4 (quatros), clique em enviar e aguarde (Pode demorar um pouco o envio).</p>
+                  <p>Caso tenha conseguido deve receber a menssagem "INSS digital enviado com sucesso, verifique seu email".</p>
+                  <p>Caso tenha recebido uma menssagem de erro va na guia <a href="#">Ajuda ?/Help</a>.</p>
+
+                </div>
             </div>
         </div>
 
