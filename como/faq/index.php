@@ -46,6 +46,11 @@ $contato = "https://inssdigital.oabam.org.br/contato";
       cursor: pointer;
         border none;
     }
+    .btn-faq:focus{
+      color: #008EFD;
+      box-shadow: 0 0 0 0;
+    }
+
 </style>
 <script>
     $(document).ready(function(){
@@ -86,14 +91,14 @@ $contato = "https://inssdigital.oabam.org.br/contato";
         <div class="card">
             <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
-                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"><i class="fa fa-plus"></i> O que é o INSS Digital?</button>
+                    <button type="button" class="btn btn-faq" data-toggle="collapse" data-target="#collapseOne"><i class="fa fa-plus"></i> O que é o INSS Digital?</button>
                 </h2>
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingUm" data-parent="#accordion">
                 <div class="card-body">
                     <p>A <b>Seção Amazonas da Ordem dos Advogados do Brasil</b> e o <b>Instituto Nacional do Seguro Social (INSS)</b> assinaram um Acordo de Cooperação Técnica para a implementação do <b>INSS Digital</b> para a advocacia amazonense. O advogado poderá realizar vários procedimentos pelo sistema do INSS na internet, inclusive abrir processos para concessão de aposentadorias e benefícios, com o envio de documentação digitalizada.</p>
                     <p>Para tanto, as advogadas e os advogados deverão fazer a adesão, através do site da OAB AM, assinando o requerimento INSS Digital e o Termo de Compromisso e Manutenção de Sigilo (TCMS) em seguida devem escanear ambos os documentos e <a href="inssdigital.oabam.org.br/enviar">enviar</a> ao INSS.</p>
-                    <p>** As assinaturas devem ser feitas à mão, e deve ser obrigatoriamente escaneadas (cada pagina um arquivo .PDF) para enviar ao INSS.</p>
+                    <p>** As assinaturas devem ser feitas à mão, e deve obrigatoriamente ser escaneadas (cada pagina um arquivo .PDF) para enviar ao INSS.</p>
                 </div>
             </div>
         </div>
@@ -116,18 +121,19 @@ $contato = "https://inssdigital.oabam.org.br/contato";
         <div class="card">
             <div class="card-header" id="headingTres">
                 <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTres"><i class="fa fa-plus"></i> Onde emitir o TCMS e o Requerimento ao INSS Digital ?</button>
+                    <button type="button" class="btn btn-faq collapsed" data-toggle="collapse" data-target="#collapseTres"><i class="fa fa-plus"></i> Onde emitir o TCMS e o Requerimento ao INSS Digital ?</button>
                 </h2>
             </div>
             <div id="collapseTres" class="collapse" aria-labelledby="headingTres" data-parent="#accordion">
                 <div class="card-body">
-                  <p>Texto de test da oabam em uma pagina de test. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Leia mais.</a></p>                </div>
+                  <p>Acesse a <a href="inssdigital.oabam.org.br">inssdigital.oabam.org.br</a>, procure a guia “Emitir”.</p>
+                </div>
             </div>
         </div>
         <div class="card">
             <div class="card-header" id="headingQuatro">
                 <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseQuatro"><i class="fa fa-plus"></i> Errei meus dados, o que eu devo fazer?</button>
+                    <button type="button" class="btn btn-faq collapsed" data-toggle="collapse" data-target="#collapseQuatro"><i class="fa fa-plus"></i> Errei meus dados, o que eu devo fazer?</button>
                 </h2>
             </div>
             <div id="collapseQuatro" class="collapse" aria-labelledby="headingTres" data-parent="#accordion">
