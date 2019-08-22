@@ -48,7 +48,7 @@ $contato = "https://inssdigital.oabam.org.br/contato";
       <div class="card-body">
         <h1 class="card-title pricing-card-title"><img src="../img/passo.png" width="230" height="113"></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><b style="color: #154259;font-weight: 500; font-size: 15px;">Um passo a passo de como se cadastrar no INSS Digital.</b></li>
+          <li><b style="color: #154259;font-weight: 500; font-size: 15px;">Um passo a passo de como se cadastrar no INSS Digital.<br>(EM CONSTRUÇÃO)</b></li>
         </ul>
         <a href="<?php echo $passo; ?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-outline-primary"><?php echo "Como Funciona ?"; ?></a>
       </div>
@@ -72,7 +72,7 @@ $contato = "https://inssdigital.oabam.org.br/contato";
       <div class="card-body">
         <h1 class="card-title pricing-card-title"><img style="padding-left: 4%;" src="../img/help.png" width="195" height="113"></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><b style="color: #154259;font-weight: 500; font-size: 15px;">Caso tenha recebido algum erro ao tentar fazer o cadastro.</b></li>
+          <li><b style="color: #154259;font-weight: 500; font-size: 15px;">Caso tenha recebido algum erro ao tentar fazer o cadastro.<br>(EM CONSTRUÇÃO)</b></li>
         </ul>
         <a href="<?php echo $help; ?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-outline-primary"><?php echo "Ajuda com Erros ?"; ?></a>
       </div>
