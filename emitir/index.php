@@ -140,7 +140,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 <?php }else{ ?>
 
              <div class="alert alert-info alert-dismissible fade show mx-auto text-center" role="alert">
-                 <strong>[Aviso] Apos emitir e assinar os documentos!</strong> Retorne ao <a style="text-decoration: underline;" class="alert-link" href="https://inssdigital.oabam.org.br">inssdigital.oabam.org.br</a> para <a style="text-decoration: underline;" class="alert-link" href="../enviar">enviar</a> ao INSS.
+                 <strong>[Aviso] Apos emitir e assinar (a mão) os documentos!</strong> Retorne ao <a style="text-decoration: underline;" class="alert-link" href="https://inssdigital.oabam.org.br">inssdigital.oabam.org.br</a> para <a style="text-decoration: underline;" class="alert-link" href="../enviar">enviar</a> ao INSS.
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                  </button>
@@ -148,7 +148,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 
 <?php } ?>
 <div class="container">
-        <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/termo.png" align="center" width="200" height="150"><br>Emitir Requerimento ao INSS Digital</br></b></h1>
+        <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/termo.png" align="center" width="200" height="150"><br>Emitir Documentos (PDF) para INSS Digital<br>Será Gerado: Página 1 - Requerimento | Página 2 - TCMS </br></b></h1>
     <div class="row">
         <div class="col-sm">
         </div>
@@ -167,7 +167,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                             <input type="text" class="form-control" id="oab_cpf" name="cpf" placeholder="Digite seu CPF">
                             <label style="padding-top: 7px;" for="oab_email">E-mail</label>
                             <input type="email" class="form-control" id="oab_email" name="email" placeholder="Digite seu email">
-                            <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                            <small id="emailHelp" class="form-text text-muted">Verifique se seus dados estão corretos, será gerado documento oficial.</small>
                         </div>
                         <!-- Campos Endereços-->
                         <div class="row">
@@ -204,6 +204,8 @@ $voltar = "https://inssdigital.oabam.org.br";
                         <div class="g-recaptcha" style="margin-top: 0px;margin-bottom: 0px;" data-sitekey="6Legp6wUAAAAAFzO3aF3Oap-jwZb1Q-tZrEnx9fx"></div>
                         </div>
                             <!-- Campos Endereços FIM-->
+							<small id="emailHelp " class="form-text text-muted text-center">Atenção sera emitido 1 (um) documento com 2 (duas) página.</small>
+							<small id="emailHelp " class="form-text text-muted text-center">Você deve imprimir e assinar (a mão) ambas as páginas. </small>
                             <input type="submit" class="sb" name="Emitir" value="Emitir">
                     </form>
                 </div>

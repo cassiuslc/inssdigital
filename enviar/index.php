@@ -254,7 +254,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 <?php }else{ ?>
 
              <div class="alert alert-info alert-dismissible fade show mx-auto text-center" role="alert">
-                 <strong>[Atenção] O envio pode demorar um pouco, aguarde.</strong> Além disso fique de olho no seu e-mail pois a senha provisória tem duração de 24 horas.
+                 <strong>[Atenção] Serão aceitos somente documentos escaneados.</strong>  Além disso verifique os seus dados nos 2 (dois) documentos que foram emitidos.
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                  </button>
@@ -294,7 +294,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                                     <input type="text" id="oab_email" name="email" class="form-control" placeholder="Digite seu email">
                                 </div>
                             </div>
-                            <label style="padding-top: 7px;">Anexos</label>
+                            <label style="padding-top: 7px;">Anexos (Somente PDF)</label>
                         <!-- Campos Endereços-->
                               <div class="container" style="display: table;width: 100%;">
                               <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
