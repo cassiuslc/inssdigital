@@ -48,6 +48,13 @@ $contato = "https://inssdigital.oabam.org.br/contato";
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
+<?php } else { ?>
+<div class="alert alert-warning alert-dismissible fade show mx-auto text-center" role="alert">
+  <strong>[Aviso] A página "Como Funciona ?".</strong>  Ainda esta em processo de criação, previsão 28/08/2019. [OAB/AM]
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 <?php } ?>
 <div class="pricing-header px-3 py-3 pt-md-1 pb-md-4 mx-auto text-center">
   <h1 class="display-5"><b style="color: #154259;font-weight: 500; font-size: 20px;">Seja bem-vindo a página de cadastramento ao INSS digital.</b></h1>
