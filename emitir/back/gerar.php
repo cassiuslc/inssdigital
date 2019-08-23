@@ -33,18 +33,23 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
         header('Location: /emitir');
         exit();
     } else {
+      $encoding = 'UTF-8';
         //Salvando dados
          if (isset($_POST['nome'])) {
              $nome= $_POST['nome'];
+
+             $nome=mb_convert_case( $nome, MB_CASE_UPPER, $encoding);
          }
          if (isset($_POST['ni'])) {
              $ni= $_POST['ni'];
+             $ni=mb_convert_case( $ni, MB_CASE_UPPER, $encoding);
          }
          if (isset($_POST['cpf'])) {
              $cpf= $_POST['cpf'];
          }
          if (isset($_POST['email'])) {
              $email= $_POST['email'];
+             $email=mb_convert_case( $email, MB_CASE_UPPER, $encoding);
          }
         if (isset($_POST['tel'])) {
             $tel= $_POST['tel'];
@@ -54,17 +59,20 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
          }
         if (isset($_POST['rua'])) {
             $rua= $_POST['rua'];
+            $rua=mb_convert_case( $rua, MB_CASE_UPPER, $encoding);
         }
         if (isset($_POST['num'])) {
             $num= $_POST['num'];
         }
          if (isset($_POST['bairro'])) {
              $bairro= $_POST['bairro'];
+             $bairro=mb_convert_case( $bairro, MB_CASE_UPPER, $encoding);
          }
          if (isset($_POST['cidade'])) {
              $cidade= $_POST['cidade'];
+             $cidade=mb_convert_case( $cidade, MB_CASE_UPPER, $encoding);
          }
-         $estado = "Amazonas";
+         $estado = "AMAZONAS";
  //Verifica Vazio
          if (empty($nome) || empty($ni)|| empty($cpf)|| empty($email)|| empty($tel) || empty($cep) || empty($rua) || empty($num) || empty($bairro) || empty($cidade) || empty($estado)) {
              $_SESSION['aviso']=sha1('INSS-PTF01');
@@ -77,12 +85,22 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
             header('Location: /emitir');
             exit();
         }
+        include "vercpf.php";
+        if (!(validaCPF($cpf))) {
+            $_SESSION['aviso']=sha1('INSS-CPF02');
+            header('Location: /emitir');
+            exit();
+        }
 //Redirecionar para create
         //Gerar PDF
         echo "Gerando PDF, Aguarde...";
 // inicializando o objeto Dompdf
         $dompdf = new Dompdf();
-        $data =  date('d/m/Y');
+//Data
+setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set('America/manaus');
+$data =  strftime(', %d de %B de %Y', strtotime('today'));
+
 // coloque nessa variável o código HTML que você quer que seja inserido no PDF
         $codigo_html = '
 <html>
@@ -95,7 +113,7 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
        border: none;
        font-size: 13px;
      }
- 
+
      .titulo_inss{
      text-align: center;
      padding-bottom: 100px;
@@ -112,16 +130,16 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
 
    </div>
    <div id="texto_inss" style="text-align: justify;page-break-after: always;"">
-        <span style="text-align: justify"><b>' . $nome . '</b>, Brasileiro (a), Advogado (a), portador (a) do CPF sob o nº <b>' . $cpf . '</b>, OAB/AM sob o nº <b>' . $ni . '</b>, com endereço à rua  <b>' . $rua . '</b>, Nº<b>' . $num . '</b>, Bairro <b>' . $bairro . '</b>, <b>' . $cidade . '/AM</b>, vem respeitosamente, informar a ciencia do TERMO DE COMPROMISSO DE MANUTENÇÃO DE SIGILO - TCMS, e por fim, solicitar o cadastramento no INSS Digital que poderá ser enviado pela plataforma do INSS ao email: <b>'.$email.'</b> - Telefone: <b>'.$tel.'</b>.</span>
+        <span style="text-align: justify"><b>' . $nome . '</b>, Brasileiro (a), Advogado (a), portador (a) do CPF sob o nº <b>' . $cpf . '</b>, OAB/AM sob o Nº <b>' . $ni . '</b>, com endereço à rua  <b>' . $rua . '</b>, Nº <b>' . $num . '</b>, Bairro <b>' . $bairro . '</b>, <b>' . $cidade . '/AM</b>, vem respeitosamente, informar a ciencia do TERMO DE COMPROMISSO DE MANUTENÇÃO DE SIGILO - TCMS, e por fim, solicitar o cadastramento no INSS Digital que poderá ser enviado pela plataforma do INSS ao e-mail: <b>'.$email.'</b> - Telefone: <b>'.$tel.'</b>.</span>
         <br><br><br><br><br><br><br><br><br>
         <span style="text-align: left"> Termos em que,<br><br><br> Pede Deferimento.</span>
         <br><br><br>
-        <span style="text-align: left"> Manaus - '.$data.'</span>
+        <span style="text-align: left"> '.$cidade.'/AM'.$data.'.</span>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <span style="text-align: center">____________________________________________________________________<br>
         <b>' . $nome . '</b></span>
    </div>
-   
+
    <center><img src="img/brasao2.jpg" width="70" height="70"></center>
    <div class="titulo_inss">
    <b>ANEXO II</b><br>
@@ -144,13 +162,13 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
         <br><br>
         <span style="text-align: justify">Declaro ter ciência das responsabilidades inerentes às atribuições a mim conferidas em virtude do ajuste firmado pelo INSS e OAB-AM, que por estar de acordo com este Termo.</span>
         <br><br>
-        <span style="text-align: left"> Manaus - '.$data.'</span>
+        <span style="text-align: left"> '.$cidade.'/AM'.$data.'.</span>
         <br><br><br><br><br>
         <span style="text-align: center">____________________________________________________________________<br>
         <b>' . $nome . '</b></span>
    </div>
    </div>
-  
+
  </body>
 ';
 // carregamos o código HTML no nosso arquivo PDF

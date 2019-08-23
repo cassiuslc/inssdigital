@@ -2,6 +2,7 @@
 <?php
 //Session PHP
 session_start();
+if(isset($_SESSION['errorARQ']))$erroarq=$_SESSION['errorARQ'];
 if(isset($_SESSION['aviso'])){
     //Avisos do Sistema
    if($_SESSION['aviso']==sha1('INSS-GNP01')) $aviso = "INSS-GNP01";
@@ -12,6 +13,7 @@ if(isset($_SESSION['aviso'])){
    else if($_SESSION['aviso']==sha1('INSS-EMF03'))$aviso = "INSS-EMF03";
    else if($_SESSION['aviso']==sha1('INSS-ERR04'))$aviso = "INSS-ERR04";
    else if($_SESSION['aviso']==sha1('INSS-EUF05'))$aviso = "INSS-EUF05";
+   else if($_SESSION['aviso']==sha1('INSS-GVR02'))$aviso = "INSS-GVR02";
    //Arquivos
     //sel01
     if($_SESSION['aviso']==sha1('vazio-mais'))$aviso="vazio-mais";
@@ -69,7 +71,8 @@ $voltar = "https://inssdigital.oabam.org.br";
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <h5 class="my-0 mr-md-auto nt" style="LINE-HEIGHT: 17px;"><b style="color: #154259;font-weight: 900; font-size: 27px;"><a href="<?php echo $logo; ?>" style="text-decoration:none; color: #154259;">INSS</b><br><b style="color: #154259;font-weight: 500; font-size: 13px;">D I G I T A L</b></a></h5>
   <nav class="my-2 my-md-0 mr-md-3">
-  	<a class="eft p-2" href="<?php echo $voltar; ?>">Voltar</a>
+  	<a class="eft p-2" href="<?php echo $voltar; ?>"><b>Voltar</b></a>
+    <a class="eft p-2" href="https://inssdigital.oabam.org.br/como">Como funciona ?</a>
     <a class="eft p-2" href="<?php echo $como; ?>">Contato</a>
   </nav>
   <a class="btn btn-outline-primary" href="<?php echo $suporte; ?>">Suporte</a>
@@ -94,7 +97,7 @@ $voltar = "https://inssdigital.oabam.org.br";
         </div>
         <?php } ?>
 
-         <?php if($aviso=="BOTOUNOVAEMICAO"){ ?>
+         <?php if($aviso=="INSS-GVR02"){ ?>
          <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
          <strong>Ocorreu um erro na Validação do eu não sou robô!</strong> Por favor recarregue a página e Tente novamente.
              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -130,7 +133,7 @@ $voltar = "https://inssdigital.oabam.org.br";
          </div>
          <?php } ?>
 
-         <?php if($aviso=="INSS-EMF03"){ ?>
+         <?php if($aviso=="INSS-ERR04"){ ?>
          <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
          <strong>Erro ao enviar o INSS Digital!</strong> Tente novamente mais tarde.
              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -139,7 +142,7 @@ $voltar = "https://inssdigital.oabam.org.br";
          </div>
          <?php } ?>
 
-         <?php if($aviso=="INSS-EMF03"){ ?>
+         <?php if($aviso=="INSS-EUF05"){ ?>
          <div class="alert alert-warning alert-dismissible fade show mx-auto text-center" role="alert">
          <strong>INSS Digital enviado!</strong> entretanto ocorreu uma falha ao enviar seu e-mail de confirmação (Aguarde nosso contato).
              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -159,7 +162,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 
          <?php if($aviso=="ERROARQ"){ ?>
          <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
-         <strong>[Cod: <?php if(isset($erroarq)){echo $erroarq;} else {echo "OAB-X";} ?>]Ocorreu um erro desconhecido no upload de um dos anexos!</strong> Tente novamente ou entre em contato com suporte.
+         <strong>[Cod: <?php if(isset($erroarq)){echo $erroarq;} else {echo "OAB-X";} ?>] Ocorreu um erro desconhecido no upload de um dos anexos!</strong> Tente novamente ou entre em contato com suporte.
              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
              </button>
@@ -208,9 +211,35 @@ $voltar = "https://inssdigital.oabam.org.br";
              </button>
          </div>
          <?php } ?>
-         <?php if($aviso=="tam-sel03"){ ?>
+         <?php if($aviso=="tam-sel02"){ ?>
          <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
          <strong>A Carterinha (Frente)!</strong> Ultrapassou o limite de Upload permitido na platarforma do INSS Digital [10mb].
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <!-- FIM Alerta Anexo -->
+         <!--Alerta Anexo -->
+         <?php if($aviso=="tipo-sel03"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>Arquivo incompatível!</strong> O Tipo de arquivo da Carterinha (Frente) não foi aceito, Somente PDF;
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <?php if($aviso=="vazio-sel03"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>Arquivo Não Enviado!</strong> Por Favor faça upload da Carterinha (Frente).
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <?php } ?>
+         <?php if($aviso=="tam-sel03"){ ?>
+         <div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
+         <strong>A Carterinha (Verso)!</strong> Ultrapassou o limite de Upload permitido na platarforma do INSS Digital [10mb].
              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                  <span aria-hidden="true">&times;</span>
              </button>
@@ -251,14 +280,6 @@ $voltar = "https://inssdigital.oabam.org.br";
              </button>
          </div>
          <?php } ?>
-<?php }else{ ?>
-
-             <div class="alert alert-info alert-dismissible fade show mx-auto text-center" role="alert">
-                 <strong>[Atenção] O envio pode demorar um pouco, aguarde.</strong> Além disso fique de olho no seu e-mail pois a senha provisória tem duração de 24 horas.
-                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                 </button>
-             </div>
 <?php } ?>
 <div class="container">
         <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/INSS.jpg" style="padding-left: 15px;" align="center" width="225" height="113"><br>Enviar pedido de cadastramento INSS Digital</br></b></h1>
@@ -273,58 +294,64 @@ $voltar = "https://inssdigital.oabam.org.br";
                         <input type="password" style="display:none">
                         <div class="form-group">
                             <label style="padding-top: 7px;" for="oab_nome">Nome</label>
-                            <input type="text" class="form-control" id="oab_nome" name="nome" placeholder="Digite seu nome">
+                            <input type="text" class="form-control" id="oab_nome" name="nome" placeholder="Seu nome">
                             <div class="row">
                                 <div class="col">
                                     <label for="oab_ni" style="padding-top: 7px;">Nº de Inscrição (OAB)</label>
-                                    <input type="tel" id="oab_ni" name="ni" class="form-control" placeholder="Digite o nº da sua OAB">
+                                    <input type="tel" id="oab_ni" name="ni" class="form-control" placeholder="Nº da sua OAB">
                                 </div>
                                 <div class="col">
                                     <label for="oab_cpf" style="padding-top: 7px;">CPF</label>
-                                    <input type="text" id="oab_cpf" name="cpf" class="form-control" placeholder="Digite seu CPF">
+                                    <input type="text" id="oab_cpf" name="cpf" class="form-control" placeholder="Seu CPF">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <label for="oab_tel" style="padding-top: 7px;">Telefone</label>
-                                    <input type="tel" id="oab_tel" name="tel" class="form-control" placeholder="Digite seu Telefone">
+                                    <input type="tel" id="oab_tel" name="tel" class="form-control" placeholder="Seu Telefone">
                                 </div>
                                 <div class="col">
                                     <label for="oab_email" style="padding-top: 7px;">E-mail</label>
-                                    <input type="text" id="oab_email" name="email" class="form-control" placeholder="Digite seu email">
+                                    <input type="text" id="oab_email" name="email" class="form-control" placeholder="Seu email">
                                 </div>
                             </div>
-                            <label style="padding-top: 7px;">Anexos</label>
+                            <br>
+                            <label style="padding-top: 7px;">Documentos Emitidos (PDF):</label>
                         <!-- Campos Endereços-->
-                              <div class="container" style="display: table;width: 90%;">
+                              <div class="container" style="display: table;width: 100%;">
                               <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
-                              <input type="text" name="txt01" id="txt01" class="file rounded-left" placeholder="Anexo I - Requerimento INSS" readonly="readonly">
+                              <input type="text" name="txt01" id="txt01" class="file rounded-left" placeholder="Página 1 - Requerimento INSS" readonly="readonly">
                               <input type="button" id="btonea" name="btone" class="btnn rounded-right" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" value="Selecionar" />
                               </div>
-                              <div class="container" style="display: table;width: 90%;">
+                              <div class="container" style="display: table;width: 100%;">
                                <!--Anexos Inicio-->
                                 <input type="file" name="sel02" id="sel02" class="arquivo" accept=".pdf">
-                                <input type="text" name="txt02" id="txt02" class="file rounded-left" placeholder="Anexo II - TCMS" readonly="readonly">
+                                <input type="text" name="txt02" id="txt02" class="file rounded-left" placeholder="Página 2 - TCMS" readonly="readonly">
                                 <input type="button" id="btoneb" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
                                 </div>
+                                <small id="emailHelp " class="form-text text-muted">** São as paginas do PDF emitido na guia “<a href="inssdigital.oabam.org.br/emitir" >Emitir</a>”.</small>
                                 <!--Anexosfim-->
-                                <div class="container" style="display: table;width: 90%;">
+                                <br>
+                                <label style="padding-top: 7px;">Carterinha OAB/AM (PDF):</label>
+                                <div class="container" style="display: table;width: 100%;">
                                 <!--Anexos Inicio Carteiras-->
                                 <input type="file" name="sel03" id="sel03" class="arquivo" accept=".pdf">
-                                <input type="text" name="txt03" id="txt03" class="file rounded-left" placeholder="Anexo III - Carterinha (Frente)" readonly="readonly">
+                                <input type="text" name="txt03" id="txt03" class="file rounded-left" placeholder="Carterinha (Frente)" readonly="readonly">
                                 <input type="button" id="btonec" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
                                 </div>
-                                <div class="container" style="display: table;width: 90%;">
+                                <div class="container" style="display: table;width: 100%;">
                                 <input type="file" name="sel04" id="sel04" class="arquivo" accept=".pdf">
-                                <input type="text" name="txt04" id="txt04" class="file rounded-left" placeholder="Anexo IV - Carterinha (Verso)" readonly="readonly">
+                                <input type="text" name="txt04" id="txt04" class="file rounded-left" placeholder="Carterinha (Verso)" readonly="readonly">
                                 <input type="button" id="btoned" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
                                 <!--Anexosfim-->
                                 </div>
+                                <small id="emailHelp " class="form-text text-muted">** Envie apenas arquivos escaneados (Não e permitidos fotos).</small>
                                 </div>
                         <div class="container" style="width: 330px;">
                         <div class="g-recaptcha" style="margin-top: 0px;margin-bottom: 0px;" data-sitekey="6Legp6wUAAAAAFzO3aF3Oap-jwZb1Q-tZrEnx9fx"></div>
                         </div>
                             <!-- Campos Endereços FIM-->
+                            <small id="emailHelp " class="form-text text-muted text-center"><b>Atenção o envio pode demorar alguns minutos aguarde.</b></small>
                             <input type="submit" class="sb" name="enviar" value="Enviar">
                     </form>
                 </div>
@@ -412,7 +439,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                     $('#txt01').val("Limite Exedido");
                 }else {
                     var fileName = $(this)[0].files[0].name;
-                    $('#txt01').val(fileName);
+                    $('#txt01').val('[Requerimento] '+fileName);
                 }
             });});
     </script>
@@ -429,7 +456,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                     $('#txt02').val("Limite Exedido");
                 }else {
                     var fileName = $(this)[0].files[0].name;
-                    $('#txt02').val(fileName);
+                    $('#txt02').val('[TCMS] '+fileName);
                 }
             });});
     </script>
@@ -446,7 +473,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                     $('#txt03').val("Limite Exedido");
                 }else {
                     var fileName = $(this)[0].files[0].name;
-                    $('#txt03').val(fileName);
+                    $('#txt03').val('[Frente] '+fileName);
                 }
             });});
     </script>
@@ -463,7 +490,7 @@ $voltar = "https://inssdigital.oabam.org.br";
                     $('#txt04').val("Limite Exedido");
                 }else{
                     var fileName = $(this)[0].files[0].name;
-                    $('#txt04').val(fileName);
+                    $('#txt04').val('[Verso] '+fileName);
                 }
             });});
     </script>

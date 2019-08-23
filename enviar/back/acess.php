@@ -22,150 +22,19 @@ curl_close($curlReCaptcha);
 # Analisa o resultado (no caso de erro, pode informar os códigos)
 if (!($vetResposta["success"])){
    $_SESSION['aviso']=md5('INSS-GVR02');
-  header('Location: /inssdigital/enviar');
+  header('Location: /enviar');
   exit();
   }else{//Acesso permitido
-
-        /*
-        //codigo desabilitado no servidor
-        $secret = 'CHAVE GOOGLE';
-        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
-        $responseData = json_decode($verifyResponse);
-        if(($responseData->success))
-        {
-            echo 'Your contact request have submitted successfully.';
-        }*/
-//Arquivos
-    $filename = "sel01";
-    if(isset($_FILES[$filename])){
-        if($_FILES[$filename]['error'] == 0){
-        if(empty($_FILES[$filename]['name'])){
-            if(empty($_FILES[$filename]['name'])&&(empty($_FILES['sel02']['name'])||empty($_FILES['sel03']['name'])||empty($_FILES['sel04']['name']))){
-                $_SESSION['aviso']=sha1('vazio-mais');
-                header('Location: /enviar');
-                exit();
-            }else{
-                $_SESSION['aviso']=sha1('vazio-sel01');
-                header('Location: /enviar');
-                exit();
-            }
-        }else{
-            if(((bool)$_FILES[$filename]['size'])>10000){
-                $_SESSION['aviso']=sha1('tam-sel01');
-                header('Location: /enviar');
-                exit();
-            }else{
-    $exten = explode(".", $_FILES[$filename]['name']);
-    if(!($_FILES[$filename]['type']=="application/pdf")||!($exten[1]=="pdf")){
-        $_SESSION['aviso']=sha1('tipo-sel01');
-        header('Location: /enviar');
-        exit();
-    }}}}else{
-            echo "1";
-            echo $_FILES[$filename]['error'];
-            exit();
-            $_SESSION['aviso']=sha1('ERROARQ');
-            $_SESSION['errorARQ']=$_FILES[$filename]['error'];
-            header('Location: /enviar');
-            exit();
-        }/*Fim isset*/}
-    $filename = "sel02";
-    if(isset($_FILES[$filename])){
-        if($_FILES[$filename]['error'] == UPLOAD_ERR_OK){
-        if(empty($_FILES[$filename]['name'])){
-            if(empty($_FILES[$filename]['name'])&&(empty($_FILES['sel01']['name'])||empty($_FILES['sel03']['name'])||empty($_FILES['sel04']['name']))){
-                $_SESSION['aviso']=sha1('vazio-mais');
-                header('Location: /enviar');
-                exit();
-            }else{
-                $_SESSION['aviso']=sha1('vazio-sel02');
-                header('Location: /enviar');
-                exit();
-            }
-        }else{
-            if(((bool)$_FILES[$filename]['size'])>10000){
-                $_SESSION['aviso']=sha1('tam-sel02');
-                header('Location: /enviar');
-                exit();
-            }else{
-                $exten = explode(".", $_FILES[$filename]['name']);
-                if(!($_FILES[$filename]['type']=="application/pdf")||!($exten[1]=="pdf")){
-                    $_SESSION['aviso']=sha1('tipo-sel02');
-                    header('Location: /inssdigital/enviar');
-                    exit();
-                }}}}else{
-            $_SESSION['aviso']=sha1('ERROARQ');
-            $_SESSION['errorARQ']=$_FILES[$filename]['error'];
-            header('Location: /enviar');
-            exit();
-        }/*Fim isset*/}
-    $filename = "sel03";
-    if(isset($_FILES[$filename])){
-        if($_FILES[$filename]['error'] == UPLOAD_ERR_OK){
-        if(empty($_FILES[$filename]['name'])){
-            if(empty($_FILES[$filename]['name'])&&(empty($_FILES['sel02']['name'])||empty($_FILES['sel01']['name'])||empty($_FILES['sel04']['name']))){
-                $_SESSION['aviso']=sha1('vazio-mais');
-                header('Location: /enviar');
-                exit();
-            }else{
-                $_SESSION['aviso']=sha1('vazio-sel03');
-                header('Location: /enviar');
-                exit();
-            }
-        }else{
-            if(((bool)$_FILES[$filename]['size'])>10000){
-                $_SESSION['aviso']=sha1('tam-sel03');
-                header('Location: /enviar');
-                exit();
-            }else{
-                $exten = explode(".", $_FILES[$filename]['name']);
-                if(!($_FILES[$filename]['type']=="application/pdf")||!($exten[1]=="pdf")){
-                    $_SESSION['aviso']=sha1('tipo-sel03');
-                    header('Location: /inssdigital/enviar');
-                    exit();
-                }}}}else{
-            $_SESSION['aviso']=sha1('ERROARQ');
-            $_SESSION['errorARQ']=$_FILES[$filename]['error'];
-            header('Location: /inssdigital/enviar');
-            exit();
-        }/*Fim isset*/}
-    $filename = "sel04";
-    if(isset($_FILES[$filename])){
-        if($_FILES[$filename]['error'] == UPLOAD_ERR_OK){
-        if(empty($_FILES[$filename]['name'])){
-            if(empty($_FILES[$filename]['name'])&&(empty($_FILES['sel02']['name'])||empty($_FILES['sel03']['name'])||empty($_FILES['sel01']['name']))){
-                $_SESSION['aviso']=sha1('vazio-mais');
-                header('Location: /enviar');
-                exit();
-            }else{
-                $_SESSION['aviso']=sha1('vazio-sel04');
-                header('Location: /enviar');
-                exit();
-            }
-        }else{
-            if(((bool)$_FILES[$filename]['size'])>10000){
-                $_SESSION['aviso']=sha1('tam-sel04');
-                header('Location: /inssdigital/enviar');
-                exit();
-            }else{
-                $exten = explode(".", $_FILES[$filename]['name']);
-                if(!($_FILES[$filename]['type']=="application/pdf")||!($exten[1]=="pdf")){
-                    $_SESSION['aviso']=sha1('tipo-sel04');
-                    header('Location: /enviar');
-                    exit();
-                }}}}else{
-            $_SESSION['aviso']=sha1('ERROARQ');
-            $_SESSION['errorARQ']=$_FILES[$filename]['error'];
-            header('Location: /enviar');
-            exit();
-        }/*Fim isset*/}
 //Salvando dados\
-         if (isset($_POST['nome'])) {
+$encoding = 'UTF-8';
+        if (isset($_POST['nome'])) {
         $nome = $_POST['nome'];
+        $nome=mb_convert_case( $nome, MB_CASE_UPPER, $encoding);
         $varnome = current(explode(" ", $nome));
         }
         if (isset($_POST['ni'])) {
             $ni = $_POST['ni'];
+            $ni=mb_convert_case( $ni, MB_CASE_UPPER, $encoding);
         }
         if (isset($_POST['cpf'])) {
             $cpf = $_POST['cpf'];
@@ -199,6 +68,183 @@ if (!($vetResposta["success"])){
             header('Location: /enviar');
             exit();
         }
+        //Arquivos
+            $filename = "sel01";
+            if(isset($_FILES[$filename])){
+                if($_FILES[$filename]['error'] == 0){
+                if(empty($_FILES[$filename]['name'])){
+                    if(empty($_FILES[$filename]['name'])&&(empty($_FILES['sel02']['name'])||empty($_FILES['sel03']['name'])||empty($_FILES['sel04']['name']))){
+                        $_SESSION['aviso']=sha1('vazio-mais');
+                        header('Location: /enviar');
+                        exit();
+                    }else{
+                        $_SESSION['aviso']=sha1('vazio-sel01');
+                        header('Location: /enviar');
+                        exit();
+                    }
+                }else{
+                    if(((bool)$_FILES[$filename]['size'])>10000){
+                        $_SESSION['aviso']=sha1('tam-sel01');
+                        header('Location: /enviar');
+                        exit();
+                    }else{
+            $exten = explode(".", $_FILES[$filename]['name']);
+            if(!($_FILES[$filename]['type']=="application/pdf")||!($exten[1]=="pdf")){
+                $_SESSION['aviso']=sha1('tipo-sel01');
+                header('Location: /enviar');
+                exit();
+            }}}}else{
+                    if($_FILES[$filename]['error']==4){
+                      $_SESSION['aviso']=sha1('vazio-sel01');
+                      header('Location: /enviar');
+                      exit();
+                    }else if($_FILES[$filename]['error']==2||$_FILES[$filename]['error']==1){
+                      $_SESSION['aviso']=sha1('tam-sel01');
+                      header('Location: /enviar');
+                      exit();
+                    }else if($_FILES[$filename]['error']==8){
+                      $_SESSION['aviso']=sha1('tipo-sel01');
+                      header('Location: /enviar');
+                      exit();
+                    }else {
+                    $_SESSION['aviso']=sha1('ERROARQ');
+                    $_SESSION['errorARQ']=$_FILES[$filename]['error'];
+                    header('Location: /enviar');
+                    exit();
+                  }
+                }/*Fim isset*/}
+            $filename = "sel02";
+            if(isset($_FILES[$filename])){
+                if($_FILES[$filename]['error'] == UPLOAD_ERR_OK){
+                if(empty($_FILES[$filename]['name'])){
+                    if(empty($_FILES[$filename]['name'])&&(empty($_FILES['sel01']['name'])||empty($_FILES['sel03']['name'])||empty($_FILES['sel04']['name']))){
+                        $_SESSION['aviso']=sha1('vazio-mais');
+                        header('Location: /enviar');
+                        exit();
+                    }else{
+                        $_SESSION['aviso']=sha1('vazio-sel02');
+                        header('Location: /enviar');
+                        exit();
+                    }
+                }else{
+                    if(((bool)$_FILES[$filename]['size'])>10000){
+                        $_SESSION['aviso']=sha1('tam-sel02');
+                        header('Location: /enviar');
+                        exit();
+                    }else{
+                        $exten = explode(".", $_FILES[$filename]['name']);
+                        if(!($_FILES[$filename]['type']=="application/pdf")||!($exten[1]=="pdf")){
+                            $_SESSION['aviso']=sha1('tipo-sel02');
+                            header('Location: /enviar');
+                            exit();
+                        }}}}else{
+                          if($_FILES[$filename]['error']==4){
+                            $_SESSION['aviso']=sha1('vazio-sel02');
+                            header('Location: /enviar');
+                            exit();
+                          }else if($_FILES[$filename]['error']==2||$_FILES[$filename]['error']==1){
+                            $_SESSION['aviso']=sha1('tam-sel02');
+                            header('Location: /enviar');
+                            exit();
+                          }else if($_FILES[$filename]['error']==8){
+                            $_SESSION['aviso']=sha1('tipo-sel02');
+                            header('Location: /enviar');
+                            exit();
+                          }else {
+                          $_SESSION['aviso']=sha1('ERROARQ');
+                          $_SESSION['errorARQ']=$_FILES[$filename]['error'];
+                          header('Location: /enviar');
+                          exit();
+                        }
+                }/*Fim isset*/}
+            $filename = "sel03";
+            if(isset($_FILES[$filename])){
+                if($_FILES[$filename]['error'] == UPLOAD_ERR_OK){
+                if(empty($_FILES[$filename]['name'])){
+                    if(empty($_FILES[$filename]['name'])&&(empty($_FILES['sel02']['name'])||empty($_FILES['sel01']['name'])||empty($_FILES['sel04']['name']))){
+                        $_SESSION['aviso']=sha1('vazio-mais');
+                        header('Location: /enviar');
+                        exit();
+                    }else{
+                        $_SESSION['aviso']=sha1('vazio-sel03');
+                        header('Location: /enviar');
+                        exit();
+                    }
+                }else{
+                    if(((bool)$_FILES[$filename]['size'])>10000){
+                        $_SESSION['aviso']=sha1('tam-sel03');
+                        header('Location: /enviar');
+                        exit();
+                    }else{
+                        $exten = explode(".", $_FILES[$filename]['name']);
+                        if(!($_FILES[$filename]['type']=="application/pdf")||!($exten[1]=="pdf")){
+                            $_SESSION['aviso']=sha1('tipo-sel03');
+                            header('Location: /enviar');
+                            exit();
+                        }}}}else{
+                          if($_FILES[$filename]['error']==4){
+                            $_SESSION['aviso']=sha1('vazio-sel03');
+                            header('Location: /enviar');
+                            exit();
+                          }else if($_FILES[$filename]['error']==2||$_FILES[$filename]['error']==1){
+                            $_SESSION['aviso']=sha1('tam-sel03');
+                            header('Location: /enviar');
+                            exit();
+                          }else if($_FILES[$filename]['error']==8){
+                            $_SESSION['aviso']=sha1('tipo-sel03');
+                            header('Location: /enviar');
+                            exit();
+                          }else {
+                          $_SESSION['aviso']=sha1('ERROARQ');
+                          $_SESSION['errorARQ']=$_FILES[$filename]['error'];
+                          header('Location: /enviar');
+                          exit();
+                        }
+                }/*Fim isset*/}
+            $filename = "sel04";
+            if(isset($_FILES[$filename])){
+                if($_FILES[$filename]['error'] == UPLOAD_ERR_OK){
+                if(empty($_FILES[$filename]['name'])){
+                    if(empty($_FILES[$filename]['name'])&&(empty($_FILES['sel02']['name'])||empty($_FILES['sel03']['name'])||empty($_FILES['sel01']['name']))){
+                        $_SESSION['aviso']=sha1('vazio-mais');
+                        header('Location: /enviar');
+                        exit();
+                    }else{
+                        $_SESSION['aviso']=sha1('vazio-sel04');
+                        header('Location: /enviar');
+                        exit();
+                    }
+                }else{
+                    if(((bool)$_FILES[$filename]['size'])>10000){
+                        $_SESSION['aviso']=sha1('tam-sel04');
+                        header('Location: /enviar');
+                        exit();
+                    }else{
+                        $exten = explode(".", $_FILES[$filename]['name']);
+                        if(!($_FILES[$filename]['type']=="application/pdf")||!($exten[1]=="pdf")){
+                            $_SESSION['aviso']=sha1('tipo-sel04');
+                            header('Location: /enviar');
+                            exit();
+                        }}}}else{
+                          if($_FILES[$filename]['error']==4){
+                            $_SESSION['aviso']=sha1('vazio-sel04');
+                            header('Location: /enviar');
+                            exit();
+                          }else if($_FILES[$filename]['error']==2||$_FILES[$filename]['error']==1){
+                            $_SESSION['aviso']=sha1('tam-sel04');
+                            header('Location: /enviar');
+                            exit();
+                          }else if($_FILES[$filename]['error']==8){
+                            $_SESSION['aviso']=sha1('tipo-sel04');
+                            header('Location: /enviar');
+                            exit();
+                          }else {
+                          $_SESSION['aviso']=sha1('ERROARQ');
+                          $_SESSION['errorARQ']=$_FILES[$filename]['error'];
+                          header('Location: /enviar');
+                          exit();
+                        }
+                }/*Fim isset*/}
     $sb="'cid:bg'";
 //Enviando Email - Start
 
@@ -307,7 +353,7 @@ div[style*="margin: 16px 0;"] { margin: 0 !important; }
                                 &nbsp;
                               </td>
                               <td align="center" bgcolor="#232e45" style="color: #ffffff; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 90px; font-weight: bold; padding: 0 15px; border-radius: 3px;" class="coupon">
-                                  5
+                                  7
                               </td>
                               <td style="font-size: 1px;" width="10">
                                 &nbsp;
@@ -409,7 +455,7 @@ div[style*="margin: 16px 0;"] { margin: 0 !important; }
         $mail->AddEmbeddedImage('./img/bg.jpg', 'bg','bg');
         $mail->Body = $body; //Corpo da mensagem caso seja HTML
         $mail->AltBody = "Nome: ".$nome."| Nº de Inscrição: ".$ni." | CPF: ".$cpf." | Telefone: ".$tel."| E-Mail: ".$email;
-        //$mail->SMTPDebug = 2; //DEBUG
+        //$mail->SMTPDebug = 2; //
         if ($mail->Send()){//Sucesso ao Enviar Email Principal
 
             //Enviando Email - Usuario
@@ -518,7 +564,7 @@ div[style*="margin: 16px 0;"] { margin: 0 !important; }
                                     &nbsp;
                                   </td>
                                   <td align="center" bgcolor="#232e45" style="color: #ffffff; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 90px; font-weight: bold; padding: 0 15px; border-radius: 3px;" class="coupon">
-                                      5
+                                      7
                                   </td>
                                   <td style="font-size: 1px;" width="10">
                                     &nbsp;
@@ -534,7 +580,7 @@ div[style*="margin: 16px 0;"] { margin: 0 !important; }
                         <td align="center" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; padding-top: 0;">
 
                             <p style="color: #b7bdc9; font-size: 16px; line-height: 24px; margin: 0;">
-                            Seu Cadastro foi recebido com sucesso, aguarde o prazo de até 5 dias uteis para receber a resposta do Instituto Nacional do Seguro Social, caso precise de ajuda entre em contato pelo número <b>(92) 9 8145-4171</b> ou <b>(92) 9 8114-3552.</b>                            </p>
+                            Seu Cadastro foi recebido com sucesso, aguarde o prazo de até 7 dias uteis para receber a resposta do Instituto Nacional do Seguro Social, caso precise de ajuda entre em contato pelo número <b>(92) 9 8145-4171</b> ou <b>(92) 9 8114-3552.</b>                            </p>
 
                         </td>
                     </tr>
@@ -555,6 +601,9 @@ div[style*="margin: 16px 0;"] { margin: 0 !important; }
                 <![endif]-->
                 <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;font-family:Arial, Helvetica, sans-serif;">
                     <h3 style="font-family:Arial, Helvetica, sans-serif;">Dados Recebidos</h3>
+                      <b>Atenção Verifique seus Dados para que não aja erro no cadastramento.</b><br><b>Verifique tambem nos Documentos enviados ao INSS na guia enviar.</b>.
+                      <br>
+                      <b>Caso encontre alguma irregularidade.</b> &nbsp; &bull; &nbsp;<b>Entre em contato via email ou telefone. </b>.
                     <div style="font-family:Arial, Helvetica, sans-serif;"><b>Nome:</b> &nbsp;'.$nome.'<br>
                         <b>Nº de Inscrição:</b> &nbsp;'.$ni.'<br>
                         <b>CPF:</b> &nbsp;'.$cpf.'<br>
@@ -612,7 +661,8 @@ div[style*="margin: 16px 0;"] { margin: 0 !important; }
             $mail->AddEmbeddedImage('./img/bg.jpg', 'bg','bg');
             $mail->Body = $body; //Corpo da mensagem caso seja HTML
             $mail->AltBody = "Nome: ".$nome."| Nº de Inscrição: ".$ni." | CPF: ".$cpf." | Telefone: ".$tel."| E-Mail: ".$email;
-            //$mail->SMTPDebug = 2; //DEBUG
+            //$mail->SMTPDebug = 2;
+            echo "Envindo Arquivo...";
             if($mail->Send()){
                 //Envio Completo
                 //if(isset($_SESSION['aviso'])){unset($_SESSION['aviso']);}

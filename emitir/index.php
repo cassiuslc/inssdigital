@@ -50,7 +50,8 @@ $voltar = "https://inssdigital.oabam.org.br";
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <h5 class="my-0 mr-md-auto nt" style="LINE-HEIGHT: 17px;"><b style="color: #154259;font-weight: 900; font-size: 27px;"><a href="<?php echo $logo; ?>" style="text-decoration:none; color: #154259;">INSS</b><br><b style="color: #154259;font-weight: 500; font-size: 13px;">D I G I T A L</b></a></h5>
   <nav class="my-2 my-md-0 mr-md-3">
-  	<a class="eft p-2" href="<?php echo $voltar; ?>">Voltar</a>
+  	<a class="eft p-2" href="<?php echo $voltar; ?>"><b>Voltar</b></a>
+    <a class="eft p-2" href="https://inssdigital.oabam.org.br/como">Como funciona ?</a>
     <a class="eft p-2" href="<?php echo $como; ?>">Contato</a>
   </nav>
   <a class="btn btn-outline-primary" href="<?php echo $suporte; ?>">Suporte</a>
@@ -140,7 +141,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 <?php }else{ ?>
 
              <div class="alert alert-info alert-dismissible fade show mx-auto text-center" role="alert">
-                 <strong>[Aviso] Apos emitir e assinar os documentos!</strong> Retorne ao <a style="text-decoration: underline;" class="alert-link" href="https://inssdigital.oabam.org.br">inssdigital.oabam.org.br</a> para <a style="text-decoration: underline;" class="alert-link" href="../enviar">enviar</a> ao INSS.
+                 <strong>Após emitir e assinar (a mão) os documentos!</strong> Retorne ao <a style="text-decoration: underline;" class="alert-link" href="https://inssdigital.oabam.org.br">inssdigital.oabam.org.br</a> para <a style="text-decoration: underline;" class="alert-link" href="../enviar">enviar</a> ao INSS.
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                  </button>
@@ -148,7 +149,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 
 <?php } ?>
 <div class="container">
-        <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/termo.png" align="center" width="200" height="150"><br>Emitir Requerimento ao INSS Digital</br></b></h1>
+        <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/termo.png" align="center" width="200" height="150"><br>Emitir Documentos (PDF) para INSS Digital</b></h1>
     <div class="row">
         <div class="col-sm">
         </div>
@@ -159,44 +160,44 @@ $voltar = "https://inssdigital.oabam.org.br";
                         <input type="text" style="display:none">
                         <input type="password" style="display:none">
                         <div class="form-group">
-                            <label style="padding-top: 7px;" for="oab_nome">Nome</label>
-                            <input type="text" class="form-control" id="oab_nome" name="nome" placeholder="Digite seu nome">
-                            <label style="padding-top: 7px;" for="oab_ni">Nº de Inscrição (OAB)</label>
-                            <input type="text" class="form-control" id="oab_ni" name="ni" placeholder="Digite o número da sua OAB">
-                            <label style="padding-top: 7px;" for="oab_cpf">CPF</label>
-                            <input type="text" class="form-control" id="oab_cpf" name="cpf" placeholder="Digite seu CPF">
-                            <label style="padding-top: 7px;" for="oab_email">E-mail</label>
-                            <input type="email" class="form-control" id="oab_email" name="email" placeholder="Digite seu email">
-                            <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                            <label style="padding-top: 7px;" for="oab_nome">Nome Completo:</label>
+                            <input type="text" class="form-control" id="oab_nome" name="nome" placeholder="Seu nome">
+                            <label style="padding-top: 7px;" for="oab_ni">Nº de Inscrição (OAB):</label>
+                            <input type="text" class="form-control" id="oab_ni" name="ni" placeholder="Número da sua OAB">
+                            <label style="padding-top: 7px;" for="oab_cpf">CPF:</label>
+                            <input type="text" class="form-control" id="oab_cpf" name="cpf" placeholder="Seu CPF">
+                            <label style="padding-top: 7px;" for="oab_email">E-mail:</label>
+                            <input type="email" class="form-control" id="oab_email" name="email" placeholder="Seu e-mail">
+                            <small id="emailHelp" class="form-text text-muted text-center"><b>Verifique se seus dados estão corretos, Antes de emitir.</b></small>
                         </div>
                         <!-- Campos Endereços-->
                         <div class="row">
                             <div class="col">
-                                <label for="oab_tel" style="padding-top: 7px;">Telefone</label>
-                                <input type="tel" id="oab_tel" name="tel" class="form-control" placeholder="Digite seu Telefone">
+                                <label for="oab_tel" style="padding-top: 7px;">Telefone:</label>
+                                <input type="tel" id="oab_tel" name="tel" class="form-control" placeholder="Seu Telefone">
                             </div>
                             <div class="col">
-                                <label for="oab_cep" style="padding-top: 7px;">CEP</label>
-                                <input type="text" id="oab_cep" name="cep" class="form-control" placeholder="Digite seu CEP">
+                                <label for="oab_cep" style="padding-top: 7px;">CEP:</label>
+                                <input type="text" id="oab_cep" name="cep" class="form-control" placeholder="Seu CEP">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label style="padding-top: 7px;" for="oab_rua">Rua</label>
+                                <label style="padding-top: 7px;" for="oab_rua">Rua:</label>
                                 <input type="text" id="oab_rua" name="rua" class="form-control" placeholder="">
                             </div>
                             <div class="col">
-                                <label style="padding-top: 7px;" for="oab_num">Número</label>
+                                <label style="padding-top: 7px;" for="oab_num">Número:</label>
                                 <input type="text" id="oab_num" name="num" class="form-control">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label style="padding-top: 5px;" for="oab_bairro">Bairro</label>
+                                <label style="padding-top: 5px;" for="oab_bairro">Bairro:</label>
                                 <input type="text" id="oab_bairro" name="bairro" class="form-control" placeholder="">
                             </div>
                             <div class="col">
-                                <label style="padding-top: 5px;" for="oab_cidade">Cidade</label>
+                                <label style="padding-top: 5px;" for="oab_cidade">Cidade:</label>
                                 <input type="text" id="oab_cidade" name="cidade" class="form-control" >
                             </div>
                         </div>
@@ -204,6 +205,8 @@ $voltar = "https://inssdigital.oabam.org.br";
                         <div class="g-recaptcha" style="margin-top: 0px;margin-bottom: 0px;" data-sitekey="6Legp6wUAAAAAFzO3aF3Oap-jwZb1Q-tZrEnx9fx"></div>
                         </div>
                             <!-- Campos Endereços FIM-->
+              <small id="emailHelp" class="form-text text-muted text-center"><b>Será emitido 1 (um) PDF com 2 (duas) página.</b></small>
+							<small id="emailHelp " class="form-text text-muted text-center">Você deve imprimir e assinar (a mão) ambas as páginas. </small>
                             <input type="submit" class="sb" name="Emitir" value="Emitir">
                     </form>
                 </div>
