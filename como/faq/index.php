@@ -139,7 +139,6 @@ $contato = "https://inssdigital.oabam.org.br/contato";
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
 
         <div class="card">
             <div class="card-header" id="headingSeis">
@@ -173,8 +172,6 @@ $contato = "https://inssdigital.oabam.org.br/contato";
             </div>
         </div>
 
-=======
->>>>>>> 459c35423e8f77f3d4b9ed9df793de2100a07d50
         <div class="card">
             <div class="card-header" id="headingQuatro">
                 <h2 class="mb-0">
@@ -216,40 +213,6 @@ $contato = "https://inssdigital.oabam.org.br/contato";
             </div>
         </div>
 
-<<<<<<< HEAD
-=======
-        <div class="card">
-            <div class="card-header" id="headingSeis">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-faq collapsed" data-toggle="collapse" data-target="#collapseSeis"><i class="fa fa-plus"></i> Como se cadastrar ?</button>
-                </h2>
-            </div>
-            <div id="collapseSeis" class="collapse" aria-labelledby="headingSeis" data-parent="#accordion">
-                <div class="card-body">
-
-                  <p>Acesse o site <a href="inssdigital.oabam.org.br">inssdigital.oabam.org.br</a>, procure a guia <b>“Emitir”</b>.</p>
-                  <p>- Em seguida você deve preencher os dados solicitados e emitir um PDF contendo 2 (duas) páginas.</p>
-                  <p>- A 1ª (Primeira página) e o Requerimento ao INSS Digital.</p>
-                  <p>- A 2ª (Segunda página) e o "TCMS" ou Termo de Compromisso e Manutenção de Sigilo.</p>
-                  <p><b>Você deve imprimir as duas páginas, conferir se seus dados estão correto (essa etapa e de extrema importância) e assinar (a mão) ambas as página.</b></p>
-
-                  <br>
-                  <p>Acesse o site <a href="inssdigital.oabam.org.br">inssdigital.oabam.org.br</a>, procure a guia <b>“Enviar”</b>.</p>
-                  <p>- Em seguida você deve preencher os dados solicitados.</p>
-                  <p>- E anexar os 4 documentos solicitados: </b>.</p>
-                  <p>[Arquivo 1] Requerimento INSS Digital (Esse arquivo esta pagina 1 do PDF, ele deve estar assinado e escaneado)</p>
-                  <p>[Arquivo 2] TCMS ou Termo de Compromisso e Manutenção de Sigilo (Esse arquivo esta pagina 2 do PDF, ele deve estar assinado e escaneado)</p>
-                  <p>[Arquivo 3] Carterinha Frente (Escaneado)</p>
-                  <p>[Arquivo 4] Carterinha Verso (Escaneado)</p>
-                  <p><b>** Atenção: Não serão aceitos fotos dos documentos apenas escaneados.</b></p><br>
-                  <p>Após Anexar os 4 (quatros), clique em enviar e aguarde (Pode demorar um pouco o envio).</p>
-                  <p>Caso tenha conseguido deve receber a menssagem "INSS digital enviado com sucesso, verifique seu email".</p>
-                  <p>Caso tenha recebido uma menssagem de erro va na guia <a href="#">Ajuda ?/Help</a>.</p>
-
-                </div>
-            </div>
-        </div>
->>>>>>> 459c35423e8f77f3d4b9ed9df793de2100a07d50
 
     </div>
 </div>

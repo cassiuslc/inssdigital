@@ -48,13 +48,6 @@ $contato = "https://inssdigital.oabam.org.br/contato";
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-<?php } else { ?>
-<div class="alert alert-warning alert-dismissible fade show mx-auto text-center" role="alert">
-  <strong>[Aviso] A página "Como Funciona ?".</strong>  Ainda esta em processo de criação, previsão 28/08/2019. [OAB/AM]
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
 <?php } ?>
 <div class="pricing-header px-3 py-3 pt-md-1 pb-md-4 mx-auto text-center">
   <h1 class="display-5"><b style="color: #154259;font-weight: 500; font-size: 20px;">Seja bem-vindo a página de cadastramento ao INSS digital.</b></h1>
@@ -71,7 +64,7 @@ $contato = "https://inssdigital.oabam.org.br/contato";
         <ul class="list-unstyled mt-3 mb-4">
           <li><b style="color: #154259;font-weight: 500; font-size: 20px;">Emitir documentos para INSS</b></li>
           <li><b style="color: #154259;font-weight: 400; font-size: 17px;">Será gerado um PDF com 2 (duas) páginas.</b></li>
-          <li><b style="color: #154259;font-weight: 400; font-size: 17px;">Cada páginas e um documento, após imprimir</b></li>
+          <li><b style="color: #154259;font-weight: 400; font-size: 17px;">Cada páginas é um documento, após imprimir</b></li>
           <li><span style="color: #154259;font-weight: 400; font-size: 15px;"><b>Assine ambos os documentos (a mão).</b></span></li>
         </ul>
         <a href="<?php

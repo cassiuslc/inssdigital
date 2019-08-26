@@ -280,17 +280,6 @@ $voltar = "https://inssdigital.oabam.org.br";
              </button>
          </div>
          <?php } ?>
-<<<<<<< HEAD
-=======
-<?php }else{ ?>
-
-             <div class="alert alert-info alert-dismissible fade show mx-auto text-center" role="alert">
-                 <strong>[Atenção] Serão aceitos somente documentos escaneados.</strong>  Além disso verifique os seus dados nos 2 (dois) documentos que foram emitidos.
-                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                 </button>
-             </div>
->>>>>>> 459c35423e8f77f3d4b9ed9df793de2100a07d50
 <?php } ?>
 <div class="container">
         <h1 class="display-5 text-center"><b style="color: #154259;font-weight: 500; font-size: 19px;"><img src="../img/INSS.jpg" style="padding-left: 15px;" align="center" width="225" height="113"><br>Enviar pedido de cadastramento INSS Digital</br></b></h1>
@@ -326,12 +315,8 @@ $voltar = "https://inssdigital.oabam.org.br";
                                     <input type="text" id="oab_email" name="email" class="form-control" placeholder="Seu email">
                                 </div>
                             </div>
-<<<<<<< HEAD
                             <br>
                             <label style="padding-top: 7px;">Documentos Emitidos (PDF):</label>
-=======
-                            <label style="padding-top: 7px;">Anexos (Somente PDF)</label>
->>>>>>> 459c35423e8f77f3d4b9ed9df793de2100a07d50
                         <!-- Campos Endereços-->
                               <div class="container" style="display: table;width: 100%;">
                               <input type="file" name="sel01" id="sel01" class="arquivo" accept=".pdf">
@@ -344,13 +329,10 @@ $voltar = "https://inssdigital.oabam.org.br";
                                 <input type="text" name="txt02" id="txt02" class="file rounded-left" placeholder="Página 2 - TCMS" readonly="readonly">
                                 <input type="button" id="btoneb" name="btone" style="font: 300 16px Oswald;color: #fff;padding-left: 4%;padding-right: 4%;" class="btnn rounded-right" value="Selecionar" />
                                 </div>
-                                <small id="emailHelp " class="form-text text-muted">** São as paginas do PDF emitido na guia “<a href="inssdigital.oabam.org.br/emitir" >Emitir</a>”.</small>
+                                <small id="emailHelp " class="form-text text-muted">** São as paginas do PDF emitido na guia “<a href="https://inssdigital.oabam.org.br/emitir" >Emitir</a>”.</small>
                                 <!--Anexosfim-->
-<<<<<<< HEAD
                                 <br>
                                 <label style="padding-top: 7px;">Carterinha OAB/AM (PDF):</label>
-=======
->>>>>>> 459c35423e8f77f3d4b9ed9df793de2100a07d50
                                 <div class="container" style="display: table;width: 100%;">
                                 <!--Anexos Inicio Carteiras-->
                                 <input type="file" name="sel03" id="sel03" class="arquivo" accept=".pdf">
