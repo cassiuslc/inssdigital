@@ -1,5 +1,5 @@
 <?php
-$title = "Inss Digital - Início";
+$title = "INSS Digital - Início";
 $logo = "https://inssdigital.oabam.org.br/";
 //Principal
 $emitir = "https://inssdigital.oabam.org.br/emitir/";
@@ -78,12 +78,13 @@ $contato = "https://inssdigital.oabam.org.br/contato";
       <div class="card-body">
         <h1 class="card-title pricing-card-title"><img style="padding-left: 4%;" src="img/INSS.jpg" width="225" height="113"></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li><b style="color: #154259;font-weight: 500; font-size: 20px;">Após emitir os documentos, será necessário:</b></li>
+          <li><b style="color: #154259;font-weight: 500; font-size: 20px;">Solicitar cadastramento, será necessário:</b></li>
           <li><b style="color: #154259;font-weight: 400; font-size: 17px;">A carterinha da OAB (Frente/Verso).</b></li>
           <li><b style="color: #154259;font-weight: 400; font-size: 17px;">Os documentos emitidos e assinados.</b></li>
           <li><span style="color: #154259;font-weight: 400; font-size: 15px;"><b>A carterinha e os documentos devem ser escaneados.</b></span></li>
         </ul>
-        <a href="<?php if(!(isset($mant))){ echo $enviar;}else{echo "#";}?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-primary" ><?php if(!(isset($mant))){echo "Enviar INSS Digital";} else {echo "Manutenção";} ?></a>
+        <a href="<?php if(!(isset($mant))){ echo $enviar;}else{echo "#";}?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-primary" ><?php if(!(isset($mant))){echo "
+Enviar Pedido de Cadastramento";} else {echo "Manutenção";} ?></a>
       </div>
     </div>
   </div>

@@ -603,7 +603,7 @@ div[style*="margin: 16px 0;"] { margin: 0 !important; }
                     <h3 style="font-family:Arial, Helvetica, sans-serif;">Dados Recebidos</h3>
                       <b>Atenção Verifique seus Dados para que não aja erro no cadastramento.</b><br><b>Verifique tambem nos Documentos enviados ao INSS na guia enviar.</b>.
                       <br>
-                      <b>Caso encontre alguma irregularidade.</b> &nbsp; &bull; &nbsp;<b>Entre em contato via email ou telefone. </b>.
+                      <b>Caso encontre alguma irregularidade.</b> &nbsp; &bull; &nbsp;<b>Entre em contato via email ou telefone. </b>.<br>
                     <div style="font-family:Arial, Helvetica, sans-serif;"><b>Nome:</b> &nbsp;'.$nome.'<br>
                         <b>Nº de Inscrição:</b> &nbsp;'.$ni.'<br>
                         <b>CPF:</b> &nbsp;'.$cpf.'<br>
