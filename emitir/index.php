@@ -263,7 +263,7 @@ $voltar = "https://inssdigital.oabam.org.br";
 <script type="text/javascript" src="../js/jquery.mask.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $("#oab_ni").mask("A000099")
+      $("#oab_ni").mask("A999999")
         $("#oab_cpf").mask("000.000.000-00")
         $("#oab_tel").mask("(00) 0000-00009").focusout(function (event) {
             var target, phone, element;

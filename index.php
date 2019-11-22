@@ -10,7 +10,7 @@ $ano = "2019";
 $suporte ="https://inssdigital.oabam.org.br/suporte";
 $como ="https://inssdigital.oabam.org.br/como";
 $contato = "https://inssdigital.oabam.org.br/contato";
-//$mant = 1; //Remova o Comentario para Manutencao
+//$mant = 1;
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -19,14 +19,15 @@ $contato = "https://inssdigital.oabam.org.br/contato";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="img/oabfavoicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style-indext.css">
+  <link rel="stylesheet" href="css/style-indexN.css">
     <title><?php echo $title;?></title>
   </head>
   <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto nt" style="LINE-HEIGHT: 17px;"><b style="color: #154259;font-weight: 900; font-size: 27px;"><a href="<?php echo $logo; ?>" style="text-decoration:none; color: #154259;">INSS</b><br><b style="color: #154259;font-weight: 500; font-size: 13px;">D I G I T A L</b></a></h5>
+  <h5 class="logo my-0 mr-md-auto nt" style="LINE-HEIGHT: 17px;"><b><a href="<?php echo $logo; ?>">INSS</b><br><b class="letras">D I G I T A L</b></a></h5>
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="eft p-2" href="<?php echo $como; ?>">Como Funciona ?</a>
     <a class="eft p-2" href="<?php echo $contato; ?>">Contato</a>
@@ -41,8 +42,18 @@ $contato = "https://inssdigital.oabam.org.br/contato";
   </button>
 </div>
 <?php } ?>
-<?php if(isset($mant)){ ?>
+
+<?php if(isset($_GET["403"])){ ?>
 <div class="alert alert-warning alert-dismissible fade show mx-auto text-center" role="alert">
+  <strong>Acesso Não Permitido!</strong> Caso precise acessar a página, Entre em <a href="<?php echo $suporte; ?>" style="text-decoration: underline;" class="alert-link">contato</a> com suporte. [Cod: 403]
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<?php } ?>
+
+<?php if(isset($mant)){ ?>
+<div class="alert alert-danger alert-dismissible fade show mx-auto text-center" role="alert">
   <strong>[Aviso] O INSS digital está passando por uma manutenção.</strong> O serviço está indisponível no momento. [Cod: 299]
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -50,49 +61,72 @@ $contato = "https://inssdigital.oabam.org.br/contato";
 </div>
 <?php } ?>
 <div class="pricing-header px-3 py-3 pt-md-1 pb-md-4 mx-auto text-center">
-  <h1 class="display-5"><b style="color: #154259;font-weight: 500; font-size: 20px;">Seja bem-vindo a página de cadastramento ao INSS digital.</b></h1>
+  <h1 class="display-5 titleN">Seja bem-vindo a página do INSS digital OAB Amazonas.</h1>
 </div>
-
 <div class="container">
-  <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal"><b style="color: #154259;font-weight: 700; font-size: 22px;">1° Passo</b></h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title"><img src="img/termo.png" width="150" height="113"></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li><b style="color: #154259;font-weight: 500; font-size: 20px;">Emitir documentos para INSS</b></li>
-          <li><b style="color: #154259;font-weight: 400; font-size: 17px;">Será gerado um PDF com 2 (duas) páginas.</b></li>
-          <li><b style="color: #154259;font-weight: 400; font-size: 17px;">Cada páginas é um documento, após imprimir</b></li>
-          <li><span style="color: #154259;font-weight: 400; font-size: 15px;"><b>Assine ambos os documentos (a mão).</b></span></li>
-        </ul>
-        <a href="<?php
-        if(isset($mant)){ echo "#";}else{echo $emitir;}?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-outline-primary"><?php if(isset($mant)){echo "Manutenção"; }else {echo "Emitir Documentos";} ?></a>
-      </div>
-    </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal"><b style="color: #154259;font-weight: 700; font-size: 22px;">2° Passo</b></h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title"><img style="padding-left: 4%;" src="img/INSS.jpg" width="225" height="113"></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li><b style="color: #154259;font-weight: 500; font-size: 20px;">Solicitar cadastramento, será necessário:</b></li>
-          <li><b style="color: #154259;font-weight: 400; font-size: 17px;">A carterinha da OAB (Frente/Verso).</b></li>
-          <li><b style="color: #154259;font-weight: 400; font-size: 17px;">Os documentos emitidos e assinados.</b></li>
-          <li><span style="color: #154259;font-weight: 400; font-size: 15px;"><b>A carterinha e os documentos devem ser escaneados.</b></span></li>
-        </ul>
-        <a href="<?php if(!(isset($mant))){ echo $enviar;}else{echo "#";}?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-primary" ><?php if(!(isset($mant))){echo "
-Enviar Pedido de Cadastramento";} else {echo "Manutenção";} ?></a>
-      </div>
+<!-- StartCard -->
+
+<div class="containerN notselect">
+  <div class="box">
+    <div class="icon">01</div>
+    <div class="contentN">
+      <p class="HL">Emitir documentação</p>
+      <p class="PL">&nbsp;&nbsp;&nbsp;Aqui você pode emitir os documentos necessários para o cadastramento.</p>
+      <p class="PL">&nbsp;&nbsp;&nbsp;Será gerado um PDF com 2 (Duas) páginas, Cada página é um documento.</p>
+      <?php if(isset($mant)){ ?>
+      <span class="red">Tente Novamente mais tarde...</span><br>
+      <a class="red" href="#">Manutenção</a>
+      <?php } else { ?>
+      <span>Assine ambos os documentos a mão.</span><br>
+      <a href="https://inssdigital.oabam.org.br/emitir/">Emitir documentos</a>
+      <?php } ?>
     </div>
   </div>
 
+  <div class="box">
+    <div class="icon">02</div>
+    <div class="contentN">
+      <p class="HL">Solicitar Cadastramento</p>
+      <p class="PL">&nbsp;&nbsp;&nbsp;É Necessário que tenha emitido a sua documentação na etapa de emissão.</p>
+      <p class="PL">&nbsp;&nbsp;&nbsp;<b>Documentos necessários:</b> TCMS, Requerimento e carteirinha da OAB frente e verso.</p>
+
+      <?php if(isset($mant)){ ?>
+      <span class="red">Tente Novamente mais tarde...</span><br>
+      <a class="red" href="#">Manutenção</a>
+      <?php } else { ?>
+      <span>Os documentos devem ser escaneados.</span><br>
+      <a href="https://inssdigital.oabam.org.br/enviar/">Enviar pedido</a>
+      <?php } ?>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="icon" style="font-size: 25px;">INSS</div>
+    <div class="contentN">
+      <p class="HL">INSS Digital Nacional</p>
+      <p class="PL">&nbsp;&nbsp;&nbsp;Essa pagina é destinada para usuários já cadastrados no INSS Digital com senha de acesso.</p>
+      <p class="PL">&nbsp;&nbsp;&nbsp;Aqui você pode acessar o portal nacional e uma página de ajuda sobre como utiliza-lo.</p>
+      <!-- <?php if(isset($mant)){ ?>
+      <span class="red">Tente Novamente mais tarde...</span><br>
+      <a class="red" href="#">Manutenção</a>
+      <?php } else { ?>
+      <span>Essa página ainda está em construção</span><br>
+      <a href="#">Indisponível</a>
+      <?php } ?> -->
+
+      <span>Essa página ainda está em construção</span><br>
+      <a href="#">Indisponível</a>
+
+    </div>
+  </div>
+</div>
+
+<!-- EndCard -->
+<div class="container">
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
       <div class="col-12 col-md">
-        <img src="img/LOGO.png" width="150" height="88">
+        <a href="https://www.oabam.org.br"><img src="img/LOGO.png" width="150" height="88"></a>
         <small class="d-block mb-3 text-muted text-left"><br>Copyright &copy; <?php echo $ano;?><br>Ordem Dos Advogados Do Brasil<br>Seção Amazonas</small>
           <small class="d-block mb-3 text-muted text-left">Desenvolvido por Cassius Lc</small>
       </div>

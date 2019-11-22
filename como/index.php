@@ -77,6 +77,7 @@ $contato = "https://inssdigital.oabam.org.br/contato";
         <a href="<?php echo $help; ?>" style="text-decoration-style: none;" class="btn btn-lg btn-block btn-outline-primary"><?php echo "Ajuda com Erros ?"; ?></a>
       </div>
     </div>
+    
   </div>
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
